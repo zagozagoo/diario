@@ -1,25 +1,25 @@
 const Sequelize = require('sequelize');
 const database = require('../config/db');
 
-const usuario = database.define ('Usuario',
+const disciplina = database.define ('Disciplina',
 {
-    IDUsuario:
+    IDDisciplina:
     {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    Usuario:
+    Nome:
     {
-        type: Sequelize.STRING(100),
+        type: Sequelize.STRING(255),
         allowNull: false 
     },
-    Senha: 
+    Instituicao: 
     {
-        type: Sequelize.STRING(30),
+        type: Sequelize.STRING(5),
         allowNull: false
     }
 });
 
-module.exports = usuario;
+module.exports = disciplina;
