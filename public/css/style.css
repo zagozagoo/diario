@@ -4,3 +4,7 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.formulario {
+    background-color: aqua;
+}

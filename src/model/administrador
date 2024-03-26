@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const database = require('../config/db');
-const usuario = require('./usuario'); //como teremos FK, tem que chamar a sala
+const usuario = require('./usuario'); 
 
 const administrador = database.define ('Administrador',
 {
@@ -25,7 +25,7 @@ const administrador = database.define ('Administrador',
 
 administrador.belongsTo (usuario,
     {
-        constraint: true, //Garantir integridadde referencial
+        constraint: true, 
         foreignKey: 'IDUsuario'
     }
 )
