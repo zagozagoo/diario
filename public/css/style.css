@@ -8,3 +8,10 @@
 .formulario {
     background-color: aqua;
 }
+
+.nav-item {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
