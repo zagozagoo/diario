@@ -1,0 +1,45 @@
+.span_salas {
+    margin: 10px;
+}
+.nav-item {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.RGB_Controle {
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card {
+    margin: 6vw;
+    width: 30%;
+}
+
+.card-img-top {
+    height: 30%;
+    width: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group>.form-control {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}

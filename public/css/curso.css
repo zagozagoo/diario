@@ -1,0 +1,45 @@
+.RGB_Controle {
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.formulario {
+    background-color: aqua;
+}
+
+.nav-item {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    margin: 8vw;
+    width: 30%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-group>.form-control {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
