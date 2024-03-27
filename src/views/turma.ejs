@@ -34,7 +34,7 @@
                         <a class="nav-link" href="/curso">Curso</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cadastroTurma">Turma</a>
+                        <a class="nav-link" href="/turma">Turma</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/professor">Professor</a>
@@ -45,8 +45,44 @@
                 </ul>
             </div>
         </nav>
-     
     </header>
+    <main>
+        <div class="d-flex">
+            <h2>Cadastrar uma nova sala</h2>
+            <form action="/sala" method="post" class="card-body">
+                <div class="input-group mb-3">
+                    <div class="divisao">
+                        <label for="sala">Nome</label>
+                        <input type="text" class="form-control" name="sala" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="divisao">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" class="form-control" name="usuario" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="senha">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="form-control" name="senha" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div>
+
+                    <div class="form-floating mb-3 w-25">
+                        <select name="select" class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
+                            <option value="valor1">Valor 1</option>
+                            <option value="valor2" selected>Valor 2</option>
+                            <option value="valor3">Valor 3</option>
+                        </select>
+                        <label for="floatingSelect">Sala</label>
+                    </div>
+                    <div class="botao-cadastrar-turma">
+                        <input type="submit" class="form-control" name="botao-cadastrar-turma" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" value="cadastrar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 
 </html>
