@@ -2,6 +2,7 @@ const express = require('express');
 const db = require('./src/config/db');
 const routes = require('./routes');
 const app = express();
+
 app.use(express.urlencoded({ extended: true }));
 // Static files
 app.use(express.static('public'));
