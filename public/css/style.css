@@ -15,12 +15,9 @@
     flex-direction: column;
     justify-content: center;
 }
-/* body{
-    overflow-y: hidden;
-} */
 
-.fundo {
-    max-height: 100vh;
+.ng-scope {
+    max-height: 100px;
     max-width: auto;
 
 }

@@ -8,9 +8,12 @@ const disciplina = require('./src/controllers/disciplina');
 const curso = require('./src/controllers/curso');
 const turma = require('./src/controllers/turma');
 const professor = require('./src/controllers/professor');
+const login = require('./src/controllers/login')
 
 // Iniciando as rotas
 route.get('/', home.pagInicialGet);
+
+route.get('/login', login.pagLoginGet);
 
 route.get('/cadastro_curso', curso.pagCursoGet);
 route.post('/cadastro_curso', curso.cursoInsert);
