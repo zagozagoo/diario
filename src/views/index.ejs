@@ -51,6 +51,23 @@
             </div>
         </nav>
     </header>
+    <main>
+        <div class="form-floating d-flex w-25 mb-3 ms-5">
+            <form action="/" method="post">
+                <select id="sala" class="form-select" aria-label="Floating label select example"
+                    onchange="this.form.submit()" name="nome">
+
+                    <option value="">Selecione um curso</option>
+
+                    <% for (let i=0; i<cursos.length; i++) { %>
+                        <option value='<%= cursos[i].IDCurso %>' <%= id == cursos[i].IDCurso? 'selected' : ''%>> <%= cursos[i].Nome %> </option>
+                    <% } %>
+
+                </select>
+            </form>
+        </div>
+
+    </main>
 </body>
 
 </html>

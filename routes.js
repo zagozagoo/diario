@@ -11,6 +11,7 @@ const professor = require('./src/controllers/professor');
 
 // Iniciando as rotas
 route.get('/', home.pagInicialGet);
+route.post('/', home.pagInicialPost);
 
 route.get('/cadastro_curso', curso.pagCursoGet);
 route.post('/cadastro_curso', curso.cursoInsert);
