@@ -18,8 +18,9 @@ route.post('/cadastro_curso', curso.cursoInsert);
 route.get('/cadastro_turma', turma.pagTurmaGet );
 
 route.get('/cadastro_disciplina', disciplina.pagDisciplinaGet);
-route.post('/cadastro_disciplina', disciplina.disciplinaInsert)
+route.post('/cadastro_disciplina', disciplina.disciplinaInsert);
 
 route.get('/cadastro_professor', professor.pagProfessorGet);
+route.post('/cadastro_professor', professor.professorInsert);
 
 module.exports = route;
