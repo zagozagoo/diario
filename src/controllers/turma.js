@@ -1,4 +1,6 @@
 const curso = require('../model/curso');
+const turma = require('../model/turma');
+const usuario = require('../model/usuario');
 
 module.exports = {
     async pagTurmaGet(req, res) {
@@ -14,14 +16,20 @@ module.exports = {
         res.render('../views/turma', { cursos }); // nome do arquivo SALAS É um parametro
     },
     async turmaInsert(req, res) {
-        // Recebe as informações do front-end
         const dados = req.body;
-        // Criando disciplina no banco de dados
-        await disciplina.create({
-            Nome: dados.disciplina,
-            Instituicao: dados.instituicao 
+        // Criar o usuário primeiro
+        const novoUsuario = await usuario.create({
+            Usuario: dados.usuario,
+            Senha: dados.senha
         });
-        // Redirecionar para a página principal
+        // Obter o idUsuario recém-criado
+        const idUsuario = novoUsuario.IDUsuario;
+        // Criar a turma e associá-la ao usuário
+        await turma.create({
+            Nome: dados.turma,
+            IDCurso: dados.cursos,
+            IDUsuario: idUsuario // Associar a turma ao usuário recém-criado
+        });
         res.redirect('/');
     }
 }

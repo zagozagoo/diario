@@ -21,7 +21,7 @@ turma.belongsTo(curso, {
     foreignKey: 'IDCurso',
     allowNull: false
 });
-usuario.belongsTo(curso, {
+turma.belongsTo(usuario, {
     constraint: true,
     foreignKey: 'IDUsuario',
     allowNull: false
