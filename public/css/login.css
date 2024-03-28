@@ -102,10 +102,13 @@ html {
         #e74c3c 60%, #e74c3c 80%,
         #f1c40f 80%, #f1c40f 100%
         );
-      height: 5px;
+      height: 6px;
       border-radius: 5px 5px 0 0;
   }
     
   }
   
+}
+body{
+    margin-top: 200px;
 }
