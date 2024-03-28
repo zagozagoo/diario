@@ -12,6 +12,7 @@ const login = require('./src/controllers/login')
 
 // Iniciando as rotas
 route.get('/', home.pagInicialGet);
+route.post('/', home.pagInicialPost);
 
 route.get('/login', login.pagLoginGet);
 
