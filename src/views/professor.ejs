@@ -50,22 +50,18 @@
     <main>
         <div class="card">
             <h2>Cadastrar um novo professor</h2>
-            <form action="/disciplina" method="post" class="card-body">
+            <form action="/cadastro_professor" method="post" class="card-body">
                 <div class="input-group mb-3">
                     <div class="divisao">
-                        <label for="nome">Nome</label>
-                        <input type="text" class="form-control" name="nome" aria-label="Sizing example input"
+                        <label for="professor">Nome</label>
+                        <input type="text" class="form-control" name="professor" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
                     </div>
-                    <div>
-                        <div>
-                            <input type="checkbox" id="instituicaoSenai" name="instituicao" checked />
-                            <label for="senai">Senai</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="instituicaoBosch" name="instituicao" />
-                            <label for="instituicao">Bosch</label>
-                        </div>
+                    <div class="divisao">
+                        <select name="instituicao">
+                            <option value="Bosch">Bosch</option>
+                            <option value="Senai" selected>Senai</option>
+                        </select>
                     </div>
 
                     <div class="divisao">

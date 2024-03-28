@@ -45,12 +45,12 @@
                 </ul>
             </div>
         </nav>
-     
+
     </header>
     <main>
         <div class="card">
             <h2>Cadastrar uma nova disciplina</h2>
-            <form action="/disciplina" method="post" class="card-body">
+            <form action="/cadastro_disciplina" method="post" class="card-body">
                 <div class="input-group mb-3">
                     <div class="divisao">
                         <label for="disciplina">Nome</label>
@@ -58,9 +58,10 @@
                             aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="divisao">
-                        <label for="instituicao">Instituição</label>
-                        <input type="text" class="form-control" name="instituicao" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default">
+                        <select name="instituicao">
+                            <option value="Bosch">Bosch</option>
+                            <option value="Senai" selected>Senai</option>
+                        </select>
                     </div>
 
                     <div class="divisao">
