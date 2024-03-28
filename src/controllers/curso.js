@@ -3,17 +3,17 @@ const curso = require('../model/curso');
 module.exports = {
     async pagCursoGet(req, res) {
         res.render('../views/curso');
-    }, 
-    async cursoInsert(req, res){
+    },
+    async cursoInsert(req, res) {
         // Recebe as informações do front-end
         const dados = req.body;
-        // Criando sala no banco de dados
+        // Criando curso no banco de dados
         await curso.create({
-        Nome: dados.disciplina
+            Nome: dados.curso
         });
         // Redirecionar para a página principal
         res.redirect('/');
-        }
+    }
 }
 
 // EXEMPLO DO LUIZ
