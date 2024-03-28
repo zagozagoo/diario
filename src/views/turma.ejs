@@ -49,11 +49,11 @@
     <main>
         <div class="card">
             <h2>Cadastrar uma nova turma</h2>
-            <form action="/sala" method="post" class="card-body">
+            <form action="/cadastro_turma" method="post" class="card-body">
                 <div class="input-group mb-3">
                     <div class="divisao">
-                        <label for="sala">Nome</label>
-                        <input type="text" class="form-control" name="sala" aria-label="Sizing example input"
+                        <label for="turma">Nome</label>
+                        <input type="text" class="form-control" name="turma" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="divisao">
@@ -68,12 +68,14 @@
                     </div>
 
                     <div class="form-floating mb-3 w-25">
-                        <select name="select" class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
-                            <option value="valor1">Valor 1</option>
-                            <option value="valor2" selected>Valor 2</option>
-                            <option value="valor3">Valor 3</option>
+                        <select name="cursos" class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
+
+                            <% for (let i=0; i<cursos.length; i++) { %>
+                                <option value='<%= cursos[i].IDCurso%>' > <%= cursos[i].Nome %> </option>
+                            <% } %>
+
                         </select>
-                        <label for="floatingSelect">Sala</label>
+                        <label for="floatingSelect">Curso</label>
                     </div>
                     <div class="divisao">
                         <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar">

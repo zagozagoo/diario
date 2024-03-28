@@ -15,7 +15,7 @@ route.get('/', home.pagInicialGet);
 route.get('/cadastro_curso', curso.pagCursoGet);
 route.post('/cadastro_curso', curso.cursoInsert);
 
-route.get('/cadastro_turma', turma.pagTurmaGet );
+route.get('/cadastro_turma', turma.ListaCurso);
 
 route.get('/cadastro_disciplina', disciplina.pagDisciplinaGet);
 route.post('/cadastro_disciplina', disciplina.disciplinaInsert);
