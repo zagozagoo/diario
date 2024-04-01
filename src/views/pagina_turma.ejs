@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bosch | Diário de Bordo</title>
 
-    <!-- Icon -->
     <link rel="icon"
         href="https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiYm9zY2hcL2ZpbGVcLzJGdzFKM1pWQmQ1OHh2YmVxVnpNLnBuZyJ9:bosch:nU4nNMJlDJCRLZwO0TbWBWDxqrnKWRRfXXDdV2hqsKo?width={width}"
         type="image/x-icon">
@@ -57,30 +56,16 @@
                 <select id="sala" class="form-select" aria-label="Floating label select example"
                     onchange="this.form.submit()" name="curso">
 
-                    <option value="">Selecione um curso</option>
-
-                    <% for (let i=0; i<cursos.length; i++) { %>
-                        <option value='<%= cursos[i].IDCurso %>' <%= id == cursos[i].IDCurso? 'selected' : ''%>> <%= cursos[i].Nome %> </option>
-                    <% } %>
-
+                    <option value="">Selecione uma matéria</option>
+<!-- lista as matérias -->
                 </select>
             </form>
         </div>
 
 
         <div class="d-flex p-2 flex-wrap justify-content-center">
-            <%for (let i=0; i<turmas.length; i++){%>
-                <div class="card  shadow-sm p-3 mb-5 bg-body-tertiary rounded align-items-center m-5 mt-0"
-                    style="width: 25rem;">
-                    <div class="card-body text-center">
-                        <a href="/pagina-da-turma?id=<%= turmas[i].IDTurma %>"><%= turmas[i].Nome %></a>
-                    </div>
-                </div>
-            <%}%>
+<!-- parte que lista os diarios -->
         </div>
-
-        <button><a href="/criar_diario">Cadastrar Diário de bordo</a> </button>
-        <!-- colocar na tela de alunos -->
     </main>
 </body>
 
