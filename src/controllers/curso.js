@@ -30,3 +30,8 @@ module.exports = {
 //         res.render('../views/professor', { info_professor });
 //     }
 // }
+
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+}

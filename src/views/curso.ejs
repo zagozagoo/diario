@@ -17,11 +17,17 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/curso.css" />
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+        }
+    </script>
 </head>
 
 <body>
-    <header>
-        <nav class="shadow-lg navbar navbar-expand-lg bg-body-tertiary top" style="background-color: #e3f2fd;">
+    <header class="header">
+        <nav class="shadow-lg navbar navbar-expand-lg top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><strong class="RGB_Controle">Diário de Bordo</strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,34 +35,36 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            </div>
-            <div class="" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <strong>Cadastrar: </strong>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cadastro_curso">Curso</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cadastro_turma">Turma</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cadastro_professor">Professor</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cadastro_disciplina">Disciplina</a>
-                    </li>
-                </ul>
+                <div class="" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <strong>Cadastrar: </strong>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cadastro_curso">Curso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cadastro_turma">Turma</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cadastro_professor">Professor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cadastro_disciplina">Disciplina</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-
     </header>
+
     <main>
-        <img ng-if="$ctrl.fundo.BackgroundImage" class="fundo"
+        <!-- <img ng-if="$ctrl.fundo.BackgroundImage" class="fundo"
             ng-src="https://ctweb03.br.bosch.com:49002/971f5a11aed042cc92e9b81445321f84.png"
             style="position:absolute; width:100%;" class="ng-scope"
-            src="https://ctweb03.br.bosch.com:49002/971f5a11aed042cc92e9b81445321f84.png">
+            src="https://ctweb03.br.bosch.com:49002/971f5a11aed042cc92e9b81445321f84.png"> -->
+        <button onclick="toggleDarkMode()" class="toggle-button">Alternar Modo</button>
+
         <div class="card">
             <h2>Cadastrar um novo curso</h2>
             <form action="/cadastro_curso" method="post" class="card-body">

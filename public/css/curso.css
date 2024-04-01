@@ -31,11 +31,67 @@ h2 {
     width: 100%;
 }
 
-.input-group>.form-control {
+.input-group > .form-control {
     width: 100%;
 }
 
 main {
     display: flex;
     justify-content: center;
+}
+
+:root {
+    --cor-fundo-claro: #ffffff; /* cor de fundo padrão (claro) */
+    --cor-texto-claro: #222222; /* cor do texto padrão (claro) */
+    --cor-fundo-escuro: #272727; /* cor de fundo em modo escuro */
+    --cor-texto-escuro: #ffffff; /* cor do texto em modo escuro */
+}
+
+body {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-claro);
+}
+
+.dark-mode {
+    background-color: var(--cor-fundo-escuro) !important;
+    color: var(--cor-texto-escuro) !important;
+}
+
+
+
+/* CSS para a barra de navegação no modo claro */
+.header.navbar {
+    background-color: var(--cor-fundo-claro) !important;
+}
+
+.header.navbar .nav-item .nav-link {
+    color: var(--cor-texto-claro) !important;
+}
+
+/* CSS para a barra de navegação no modo escuro */
+.dark-mode .header.navbar {
+    background-color: var(--cor-fundo-escuro) !important;
+}
+
+.dark-mode .header.navbar .nav-item .nav-link {
+    color: var(--cor-texto-escuro) !important; /* Altera a cor do texto dos nav-links para o modo escuro */
+}
+
+.dark-mode a {
+    color: var(--cor-texto-escuro) !important;
+}
+
+/*o formulário no modo escuro */
+.dark-mode .card {
+    background-color: #333; /* or de fundo para o modo escuro */
+    color: var(--cor-texto-escuro) !important; /* altera a cor do texto do formulário para o modo escuro */
+}
+
+
+/* ajustando posição do botão */
+.toggle-button {
+    position: fixed;
+    top: 60px; /* Altura da barra de navegação */
+    left: 20px;
+    z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
 }
