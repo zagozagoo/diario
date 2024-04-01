@@ -16,23 +16,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/diario.css">
-
-
-    <script>
-        function toggleDarkMode() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-        }
-        // Seleciona o elemento da caixa de texto
-        const descricaoTextarea = document.getElementById('descricao');
-
-        // Adiciona um ouvinte de evento de entrada para a caixa de texto
-        descricaoTextarea.addEventListener('input', function () {
-            // Ajusta a altura da caixa de texto com base no conteúdo inserido pelo usuário
-            this.style.height = 'auto';
-            this.style.height = (this.scrollHeight) + 'px';
-        });
-    </script>
+    <script src="../../public/js/script.js"></script>
 </head>
 
 <body>
