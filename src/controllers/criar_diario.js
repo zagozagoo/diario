@@ -22,9 +22,11 @@ module.exports = {
     async DiarioInsert(req, res) {
         const dados = req.body;
 
+        const dataFormatada = new Date(dados.data).toISOString();
+
         await diario.create({
             Descricao: dados.descricao,
-            Data: dados.data,
+            Data: dataFormatada,
             IDProfessor: dados.professor,
             IDTurma: dados.turma,
             IDDisciplina: dados.disciplina

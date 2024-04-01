@@ -63,17 +63,19 @@
 
             <button onclick="toggleDarkMode()" class="toggle-button">Alternar Modo</button>
             <div class="form-floating">
-                
+
                 <form action="/" method="post">
                     <select id="curso" class="form-select" aria-label="Floating label select example"
-                    onchange="this.form.submit()" name="curso">
-                    
-                    <option value="">Selecione um curso</option>
-                    
-                    <% for (let i=0; i<cursos.length; i++) { %>
-                        <option value='<%= cursos[i].IDCurso %>' <%= id == cursos[i].IDCurso? 'selected' : ''%>> <%= cursos[i].Nome %> </option>
-                        <% } %>
-                        
+                        onchange="this.form.submit()" name="curso">
+
+                        <option value="">Selecione um curso</option>
+
+                        <% for (let i=0; i<cursos.length; i++) { %>
+                            <option value='<%= cursos[i].IDCurso %>' <%=id==cursos[i].IDCurso? 'selected' : '' %>> <%=
+                                    cursos[i].Nome %>
+                            </option>
+                            <% } %>
+
                     </select>
                 </form>
             </div>
@@ -85,10 +87,12 @@
                 <div class="card  shadow-sm p-3 mb-5 bg-body-tertiary rounded align-items-center m-5 mt-0"
                     style="width: 25rem;">
                     <div class="card-body text-center">
-                        <a href="/pagina-da-turma?id=<%= turmas[i].IDTurma %>"><%= turmas[i].Nome %></a>
+                        <a href="/pagina-da-turma?id=<%= turmas[i].IDTurma %>">
+                            <%= turmas[i].Nome %>
+                        </a>
                     </div>
                 </div>
-            <%}%>
+                <%}%>
         </div>
 
         <button style="margin-top: 100px;"><a href="/criar_diario">Cadastrar Diário de bordo</a> </button>
