@@ -15,7 +15,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/turma.css">
+    <link rel="stylesheet" href="../css/diario.css">
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+        }
+    </script>
 </head>
 
 <body>
@@ -51,6 +58,8 @@
         </nav>
     </header>
     <main>
+        <button onclick="toggleDarkMode()" class="toggle-button">Alternar Modo</button>
+
         <div class="card">
             <h2>Cadastrar uma novo diário</h2>
             <form action="/criar_diario" method="post" class="card-body">
@@ -97,7 +106,7 @@
                 </div>
                 <div class="text">
                     <label for="descricao">Descrição</label>
-                    <input  required type="text" class="form-control" name="descricao" aria-label="Sizing example input"
+                    <input  required type="text" id="descricao" class="form-control" name="descricao" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default">
                 </div>
                 <div class="divisao">
