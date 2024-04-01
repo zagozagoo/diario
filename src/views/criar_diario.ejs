@@ -17,17 +17,27 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/diario.css">
 
+
     <script>
         function toggleDarkMode() {
             const body = document.body;
             body.classList.toggle('dark-mode');
         }
+        // Seleciona o elemento da caixa de texto
+        const descricaoTextarea = document.getElementById('descricao');
+
+        // Adiciona um ouvinte de evento de entrada para a caixa de texto
+        descricaoTextarea.addEventListener('input', function () {
+            // Ajusta a altura da caixa de texto com base no conteúdo inserido pelo usuário
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
     </script>
 </head>
 
 <body>
     <header>
-        <nav class="shadow-lg navbar navbar-expand-lg bg-body-tertiary top" style="background-color: #e3f2fd;">
+        <nav class="shadow-lg navbar navbar-expand-lg top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><strong class="RGB_Controle">Diário de Bordo</strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -85,7 +95,7 @@
                             <% } %>
                     </select>
                 </div>
- 
+
                 <div class="disciplina">
                     <label for="disciplina">Disciplina</label>
                     <select name="disciplina" class="form-select" id="floatingSelect"
@@ -106,9 +116,10 @@
                 </div>
                 <div class="text">
                     <label for="descricao">Descrição</label>
-                    <input  required type="text" id="descricao" class="form-control" name="descricao" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default">
+                    <textarea required id="descricao" class="form-control" name="descricao"
+                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
                 </div>
+
                 <div class="divisao">
                     <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar">
                 </div>

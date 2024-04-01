@@ -1,3 +1,5 @@
+/*DARK MODE https://codepen.io/tannerdolby/pen/pogggVN */
+
 .RGB_Controle {
     background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255));
     -webkit-background-clip: text;
@@ -18,7 +20,7 @@
 }
 
 .card-body {
-    height:650px;
+    height:450px;
 }
 
 h2 {
@@ -28,8 +30,10 @@ h2 {
 .input-group>.form-control {
     width: 100%;
 }
+
 #descricao {
-    height: 300px;
+    min-height: 100px; /* Altura mínima inicial da caixa de texto */
+    resize: vertical; /* Permite redimensionamento vertical da caixa de texto */
 }
 
 main {
