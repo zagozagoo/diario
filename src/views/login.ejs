@@ -19,9 +19,18 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/login.css">
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+        }
+    </script>
 </head>
 
 <body>
+    <button onclick="toggleDarkMode()" class="toggle-button">Alternar Modo</button>
+
     <div class="login-wrap">
         <h2>Login</h2>
         

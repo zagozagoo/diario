@@ -17,11 +17,18 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/disciplina.css" />
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+        }
+    </script>
 </head>
 
 <body>
     <header>
-        <nav class="shadow-lg navbar navbar-expand-lg bg-body-tertiary top" style="background-color: #e3f2fd;">
+        <nav class="shadow-lg navbar navbar-expand-lg top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><strong class="RGB_Controle">Diário de Bordo</strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -53,6 +60,8 @@
 
     </header>
     <main>
+        <button onclick="toggleDarkMode()" class="toggle-button">Alternar Modo</button>
+
         <div class="card">
             <h2>Cadastrar uma nova disciplina</h2>
             <form action="/cadastro_disciplina" method="post" class="card-body">

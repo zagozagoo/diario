@@ -40,6 +40,8 @@ main {
     justify-content: center;
 }
 
+
+/* configurações de modo claro/escuro */
 :root {
     --cor-fundo-claro: #ffffff; /* cor de fundo padrão (claro) */
     --cor-texto-claro: #222222; /* cor do texto padrão (claro) */
@@ -56,7 +58,6 @@ body {
     background-color: var(--cor-fundo-escuro) !important;
     color: var(--cor-texto-escuro) !important;
 }
-
 
 
 /* CSS para a barra de navegação no modo claro */
