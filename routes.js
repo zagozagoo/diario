@@ -34,6 +34,5 @@ route.get('/cadastro_professor', professor.pagProfessorGet);
 route.post('/cadastro_professor', professor.professorInsert);
 
 route.get('/pagina-da-turma', turmaSelecionada.listaDisciplinas);
-route.post('/pagina-da-turma', turmaSelecionada.pagTurmasPost);
 
 module.exports = route;

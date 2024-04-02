@@ -16,6 +16,104 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .RGB_Controle {
+            background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .formulario {
+            background-color: aqua;
+        }
+
+        .nav-item {
+            margin-right: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .ng-scope {
+            max-height: 100px;
+            max-width: auto;
+
+        }
+
+        /* configurações de modo claro/escuro */
+        :root {
+            --cor-fundo-claro: #ffffff;
+            /* cor de fundo padrão (claro) */
+            --cor-texto-claro: #222222;
+            /* cor do texto padrão (claro) */
+            --cor-fundo-escuro: #272727;
+            /* cor de fundo em modo escuro */
+            --cor-texto-escuro: #ffffff;
+            /* cor do texto em modo escuro */
+        }
+
+        body {
+            background-color: var(--cor-fundo-claro);
+            color: var(--cor-texto-claro);
+        }
+
+        .dark-mode {
+            background-color: var(--cor-fundo-escuro) !important;
+            color: var(--cor-texto-escuro) !important;
+        }
+
+
+        /* CSS para a barra de navegação no modo claro */
+        .header.navbar {
+            background-color: var(--cor-fundo-claro) !important;
+        }
+
+        .header.navbar .nav-item .nav-link {
+            color: var(--cor-texto-claro) !important;
+        }
+
+        /* CSS para a barra de navegação no modo escuro */
+        .dark-mode .header.navbar {
+            background-color: var(--cor-fundo-escuro) !important;
+        }
+
+        .dark-mode .header.navbar .nav-item .nav-link {
+            color: var(--cor-texto-escuro) !important;
+            /* Altera a cor do texto dos nav-links para o modo escuro */
+        }
+
+        .dark-mode a {
+            color: var(--cor-texto-escuro) !important;
+        }
+
+        /*o formulário no modo escuro */
+        .dark-mode .card {
+            background-color: #333;
+            /* or de fundo para o modo escuro */
+            color: var(--cor-texto-escuro) !important;
+            /* altera a cor do texto do formulário para o modo escuro */
+        }
+
+
+        /* ajustando posição do botão */
+        .dtoggle-button {
+            position: fixed;
+            top: 80px;
+            /* Altura da nav */
+            left: 20px;
+            z-index: 9999;
+            /* Certifica-se de que o botão está acima de outros elementos */
+        }
+
+        .flex {
+            width: 100%;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -51,33 +149,47 @@
         </nav>
     </header>
     <main>
-        <div class="form-floating d-flex w-25 mb-3 ms-5">
-            <form action="/" method="post">
-                <select name="disciplina" class="form-select" id="floatingSelect"
-                    aria-label="Floating label select example" required>
+        <!-- <div class="form-floating d-flex w-25 mb-3 ms-5">
+            <form action="/pagina-da-turma/<% //id %>" method="post">
+              
+               <select name="disciplina" class="form-select" id="floatingSelect"
+                    aria-label="Floating label select example"  onchange="this.form.submit()">
                     <option value="default">Selecione uma disciplina</option>
-                    <% for (let i=0; i<disciplinas.length; i++) { %>
-                        <option value='<%= disciplinas[i].IDDisciplina%>'>
-                            <%= disciplinas[i].Nome %>
+                    <%// for (let i=0; i<disciplinas.length; i++) { %>
+                        <option value='<%=// disciplinas[i].IDDisciplina%>'>
+                            <%=// disciplinas[i].Nome %>
                         </option>
-                        <% } %>
-                </select>
+                        <% //} %>
+                </select> 
             </form>
-        </div>
-    
-        <div>
-            <% diarios.forEach(diario => { %>
-                <hr>
-                <div class="d-flex">
-                    <p>Data: <%= new Date(diario.Data).toLocaleDateString('pt-BR'); %></p>
-                    <p>Professor: <%= professores.filter(x => x.IDProfessor == diario.IDProfessor)[0].Nome %></p>
-                    <p>Turma: <%= turmas.filter(x => x.IDTurma == diario.IDTurma)[0].Nome %></p>
-                    <p>Disciplina: <%= disciplinas.filter(x => x.IDDisciplina == diario.IDDisciplina)[0].Nome %></p>
-                </div>
-            <% }); %>
-        </div>
+        </div> -->
 
-        <div class="d-flex p-2 flex-wrap justify-content-center">
+        <div class="item">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                    <td>Data</td>
+                    <td>Disciplina</td>
+                    <td>Professor</td>
+                    <td>Turma</td>
+                    <td></td>
+                </tr>
+                </thead>
+            <% diarios.forEach(diario=> { %>
+                    <div class="d-flex justify-content-center flex-wrap gap-5">
+                        <tbody>   
+                                <td><p><%= new Date(diario.Data).toLocaleDateString('pt-BR'); %></p></td>
+                                <td><p><%= disciplinas.filter(x=> x.IDDisciplina == diario.IDDisciplina)[0].Nome %></p></td>
+                                <td><p><%= professores.filter(x=> x.IDProfessor == diario.IDProfessor)[0].Nome %></p></td>
+                                <td><p><%= turmas.filter(x=> x.IDTurma == diario.IDTurma)[0].Nome %></p></td>
+                                <td><a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                  </svg></a></td>
+                        </tbody></a>
+                    </div>
+                <% }); %>
+            </table>
         </div>
     </main>
 </body>

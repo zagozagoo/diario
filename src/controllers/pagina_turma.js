@@ -20,7 +20,7 @@ module.exports = {
         } else {
             diarios = await diario.findAll({
                 raw: true,
-                attributes: ['Diario','Data', 'IDProfessor', 'IDTurma',  'IDDisciplina']
+                attributes: ['IDDiario','Data', 'IDProfessor', 'IDTurma',  'IDDisciplina']
             });
         }
 
@@ -42,10 +42,50 @@ module.exports = {
         res.render('../views/pagina_turma', { disciplinas, diarios, professores, id, turmas });
     },
 
+    // async pagTurmasPost(req, res) {
+    //     const idDisciplina = req.body.disciplina;
+    //     const id = req.params.id;
 
-    async pagTurmasPost(req, res) {
-       
-        const disciplinas = await disciplina.findAll({ raw: true, attributes: ['IDDisciplina', 'Nome'] });
-        res.render('../views/pagina_turma', { disciplinas, diarios, id });
-    }
+    //     let diarios;
+
+    //     if ( id) {
+
+    //         if( idDisciplina){
+    //             diarios = await diario.findAll({
+    //             raw: true,
+    //             attributes: ['IDDiario', 'Data', 'IDProfessor', 'IDTurma',  'IDDisciplina'],
+    //             where: { IDTurma: id, IDDisciplina: idDisciplina }
+    //             });
+    //         } else {
+    //             diarios = await diario.findAll({
+    //              raw: true,
+    //              attributes: ['IDDiario', 'Data', 'IDProfessor', 'IDTurma',  'IDDisciplina'],
+    //              where: { IDTurma: id }
+    //              });
+    //         }
+
+    
+    //     } else {
+    //        diarios = await diario.findAll({
+    //         raw: true,
+    //         attributes: ['IDDiario', 'Data', 'IDProfessor', 'IDTurma',  'IDDisciplina']
+    //         });
+    //     }
+
+    //     const disciplinas = await disciplina.findAll({
+    //         raw: true,
+    //         attributes: ['IDDisciplina', 'Nome']
+    //     });
+
+    //     const professores = await professor.findAll({
+    //         raw: true,
+    //         attributes: ['IDProfessor', 'Nome']
+    //     });
+
+    //     const turmas = await turma.findAll({
+    //         raw: true,
+    //         attributes: ['IDTurma', 'Nome']
+    //     });
+    //     res.render('../views/pagina_turma/', { disciplinas, diarios, professores, idDisciplina,id, turmas });
+    // }
 }
