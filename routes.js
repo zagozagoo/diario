@@ -11,6 +11,7 @@ const professor = require('./src/controllers/professor');
 const login = require('./src/controllers/login');
 const turmaSelecionada = require('./src/controllers/pagina_turma');
 const diario = require('./src/controllers/criar_diario');
+const visualizacao= require('./src/controllers/visualizacao_diario');
 
 // Iniciando as rotas
 route.get('/', home.pagInicialGet);
@@ -34,5 +35,7 @@ route.get('/cadastro_professor', professor.pagProfessorGet);
 route.post('/cadastro_professor', professor.professorInsert);
 
 route.get('/pagina-da-turma', turmaSelecionada.listaDisciplinas);
+
+route.get('/visualizacao_diario', visualizacao.pagVisualizacaoGet);
 
 module.exports = route;
