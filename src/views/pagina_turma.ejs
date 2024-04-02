@@ -64,23 +64,20 @@
                 </select>
             </form>
         </div>
-
-        <div class="d-flex">
-            <p>
-                <% for (let i=0; i<diarios.length; i++) { %>
-                    <p><%= diarios[i].Data%></p>
-                    <P>*******************</P>
-                    <p><%= disciplinas[i].Nome%></p>
-                    <P>*******************</P>
-                    <p><%= professores[i].Nome%></p>
-                <% } %>
-            </p>
-
+    
+        <div>
+            <% diarios.forEach(diario => { %>
+                <hr>
+                <div class="d-flex">
+                    <p>Data: <%= new Date(diario.Data).toLocaleDateString('pt-BR'); %></p>
+                    <p>Professor: <%= professores.filter(x => x.IDProfessor == diario.IDProfessor)[0].Nome %></p>
+                    <p>Turma: <%= turmas.filter(x => x.IDTurma == diario.IDTurma)[0].Nome %></p>
+                    <p>Disciplina: <%= disciplinas.filter(x => x.IDDisciplina == diario.IDDisciplina)[0].Nome %></p>
+                </div>
+            <% }); %>
         </div>
 
-
         <div class="d-flex p-2 flex-wrap justify-content-center">
-            <!-- parte que lista os diarios -->
         </div>
     </main>
 </body>
