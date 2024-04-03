@@ -19,6 +19,12 @@ const usuario = database.define ('Usuario',
     {
         type: Sequelize.STRING(30),
         allowNull: false
+    },
+    Permissao:
+    {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
     }
 });
 

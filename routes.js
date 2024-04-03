@@ -18,6 +18,7 @@ route.get('/', home.pagInicialGet);
 route.post('/', home.pagInicialPost);
 
 route.get('/login', login.pagLoginGet);
+route.post('/login', login.verificarLoginPost);
 
 route.get('/cadastro_curso', curso.pagCursoGet);
 route.post('/cadastro_curso', curso.cursoInsert);

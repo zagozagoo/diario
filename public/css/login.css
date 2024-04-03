@@ -10,7 +10,7 @@ html {
   .login-wrap {
     position: relative;
     margin: 0 auto;
-    background: #ecf0f1;
+    background: rgb(255,255,255,0.3);
     width: 350px;
     border-radius: 5px;
     box-shadow: 3px 3px 10px #333;
@@ -21,7 +21,7 @@ html {
       font-weight: 200;
       font-size: 2em;
       margin-top: 10px;
-      color: #34495e;
+      color: #ffffff;
     }
     
     .form {
@@ -90,10 +90,7 @@ html {
     right: 0;    
     background:-webkit-linear-gradient(left,               
         #27ae60 0%, #27ae60 20%, 
-        #8e44ad 20%, #8e44ad 40%,
-        #3498db 40%, #3498db 60%,
-        #e74c3c 60%, #e74c3c 80%,
-        #f1c40f 80%, #f1c40f 100%
+        #3498db 40%, #3498db 60%
         );
        background:-moz-linear-gradient(left,               
         #27ae60 0%, #27ae60 20%, 
@@ -109,15 +106,21 @@ html {
   }
   
 }
-body{
-    margin-top: 200px;
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../image/bosch.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* configurações de modo claro/escuro */
 :root {
   --cor-fundo-claro: #ffffff; /* cor de fundo padrão (claro) */
   --cor-texto-claro: #222222; /* cor do texto padrão (claro) */
-  --cor-fundo-escuro: #272727; /* cor de fundo em modo escuro */
+  --cor-fundo-escuro: #3d3d3d; /* cor de fundo em modo escuro */
   --cor-texto-escuro: #ffffff; /* cor do texto em modo escuro */
 }
 

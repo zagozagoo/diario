@@ -20,7 +20,8 @@ module.exports = {
         // Criar o usuário primeiro
         const novoUsuario = await usuario.create({
             Usuario: dados.usuario,
-            Senha: dados.senha
+            Senha: dados.senha,
+            Permissao: false
         });
         // Obter o idUsuario recém-criado
         const idUsuario = novoUsuario.IDUsuario;

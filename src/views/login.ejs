@@ -20,7 +20,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/login.css">
     <script src="../../public/js/script.js"></script>
-    
+
     <script>
         function toggleDarkMode() {
             const body = document.body;
@@ -30,17 +30,20 @@
 </head>
 
 <body>
-    <button onclick="toggleDarkMode()" class="toggle-button">Alternar Modo</button>
+    <main>
+        <div class="login-wrap">
+            <h2>Login</h2>
 
-    <div class="login-wrap">
-        <h2>Login</h2>
-        
-        <div class="form">
-          <input type="text" placeholder="EDV ou Turma" name="un" />
-          <input type="password" placeholder="Senha" name="pw" />
-          <button> Entrar </button>
+            <div class="form">
+                <form action="/login" method="post">
+                <input type="text" placeholder="EDV ou Turma" name="usuario" />
+                <input type="password" placeholder="Senha" name="senha" />
+                <a href="">Recuperar senha?</a>
+                <button type="submit"> Entrar </button>
+            </form>
+            </div>
         </div>
-      </div>
+    </main>
 </body>
 
 </html>

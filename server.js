@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 // Static files
-app.use(express.static('public'));
+app.use(express.static('./public'));
 // EJS
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
