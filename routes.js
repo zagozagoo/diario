@@ -14,13 +14,11 @@ const diario = require('./src/controllers/criar_diario');
 const visualizacao= require('./src/controllers/visualizacao_diario');
 const TM_diarios = require('./src/controllers/TM_diarios');
 const TM_visualizacao = require('./src/controllers/TM_visualizacao_diario');
+const recuperar_senha = require('./src/controllers/recuperar_senha');
 
 // Iniciando as rotas
 route.get('/', home.pagInicialGet);
 route.post('/', home.pagInicialPost);
-
-route.get('/login', login.pagLoginGet);
-route.post('/login', login.verificarLoginPost);
 
 route.get('/cadastro_curso', curso.pagCursoGet);
 route.post('/cadastro_curso', curso.cursoInsert);
@@ -45,5 +43,12 @@ route.get('/visualizacao_diario', visualizacao.pagVisualizacaoGet);
 route.get('/diario_turmas', TM_diarios.listaDisciplinas);
 
 route.get('/visualizacao_turma_diario', TM_visualizacao.pagVisualizacaoGet);
+
+//senhas e recuperação de senhas
+route.get('/login', login.pagLoginGet);
+route.post('/login', login.verificarLoginPost);
+
+route.get('/recuperar_senha', recuperar_senha.pagRecadastrarSenhaGet);
+route.post('/recuperar_senha', recuperar_senha.pagRecadastrarSenhaPost);
 
 module.exports = route;
