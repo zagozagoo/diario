@@ -14,11 +14,14 @@ module.exports = {
             where: {Usuario: login, Senha: senha}
         });
 
-        console.log(pessoaIdentificada)
-
         if (pessoaIdentificada) {
-            res.redirect('/');
-            // redirecionando para a route home, que é '/'
+            if(pessoaIdentificada.Permissao == 0 || false){
+                res.redirect('/diario_turmas/?id=' + pessoaIdentificada.IDUsuario);
+            }
+            else{
+                res.redirect('/');
+            }
+            // Redirecionando para a rota home ('/') com o parâmetro IDUsuario na URL
         }
         else {
             resultado = false;
