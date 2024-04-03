@@ -1,4 +1,5 @@
 const usuario = require('../model/usuario');
+const turma = require('../model/turma');
 
 module.exports = {
     async pagLoginGet(req, res) {
@@ -15,8 +16,14 @@ module.exports = {
         });
 
         if (pessoaIdentificada) {
+            const turmaCerta = await turma.findOne ({
+                raw: true,
+                attributes: ['IDTurma'],
+                where: {IDUsuario: pessoaIdentificada.IDUsuario}
+            });
+
             if(pessoaIdentificada.Permissao == 0 || false){
-                res.redirect('/diario_turmas/?id=' + pessoaIdentificada.IDUsuario);
+                res.redirect('/diario_turmas/?id=' + turmaCerta.IDTurma);
             }
             else{
                 res.redirect('/');

@@ -69,19 +69,22 @@ body {
     color: var(--cor-texto-escuro) !important; /* altera a cor do texto do formulário para o modo escuro */
 }
 
-
-/* ajustando posição do botão */
-.dtoggle-button {
-    position: fixed;
-    top: 80px; /* Altura da nav */
-    left: 20px;
-    z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
-}
-
 .flex {
     width: 100%;
     position: fixed;
     display: flex;
     justify-content: space-between;
     padding: 20px;
+}
+
+.toggle-button {
+    border: 0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.toggle-button:hover {
+    background-color: rgb(158, 158, 158);
+    transition: 0.5s;
 }

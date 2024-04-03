@@ -18,7 +18,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <script src="../../public/js/script.js"></script>
-    
+
     <script>
         function toggleDarkMode() {
             const body = document.body;
@@ -61,7 +61,6 @@
     </header>
     <main>
         <div class="flex">
-
             <button onclick="toggleDarkMode()" class="toggle-button">Alternar Modo</button>
             <div class="form-floating">
 
@@ -85,19 +84,20 @@
 
         <div class="d-flex p-2 flex-wrap justify-content-center">
             <%for (let i=0; i<turmas.length; i++){%>
-                <div class="card  shadow-sm p-3 mb-5 bg-body-tertiary rounded align-items-center m-5 mt-0"
-                    style="width: 25rem;">
-                    <div class="card-body text-center">
-                        <a href="/pagina-da-turma?id=<%= turmas[i].IDTurma %>">
+                <!-- tem que ajustar o bloco -->
+                <a href="/pagina-da-turma?id=<%= turmas[i].IDTurma %>">
+                    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded align-items-center m-5 mt-0"
+                        style="width: 25rem;">
+                        <div class="card-body text-center">
                             <%= turmas[i].Nome %>
-                        </a>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <%}%>
         </div>
 
-        <button style="margin-top: 100px;"><a href="/criar_diario">Cadastrar Diário de bordo</a> </button>
         <!-- colocar na tela de alunos -->
+
     </main>
 </body>
 

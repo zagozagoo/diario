@@ -1,27 +1,26 @@
-const professor = require('../model/professor');
 const disciplina = require('../model/disciplina');
 const diario = require('../model/diario');
 const turma = require('../model/turma');
-const usuario = require('../model/usuario');
+const professor = require('../model/professor');
 
 module.exports = {
-    async listaDisciplinas(req, res) {
-        const id = req.query.id; //USER
+    async pagVisualizacaoGet(req, res) {
+        const id = req.query.id;
 
         let diarios;
       
         if (id) {
             diarios = await diario.findAll({
             raw: true,
-            attributes: ['IDDiario', 'Data', 'IDProfessor', 'IDTurma',  'IDDisciplina'],
-            where: { IDTurma: id }
+            attributes: ['IDDiario', 'Data', 'IDProfessor', 'IDTurma',  'IDDisciplina', 'Descricao'],
+            where: { IDDiario: id }
             });
 
            
         } else {
             diarios = await diario.findAll({
                 raw: true,
-                attributes: ['IDDiario','Data', 'IDProfessor', 'IDTurma',  'IDDisciplina']
+                attributes: ['IDDiario','Data', 'IDProfessor', 'IDTurma',  'IDDisciplina', 'Descricao']
             });
         }
 
@@ -37,14 +36,9 @@ module.exports = {
 
         const turmas = await turma.findAll({
             raw: true,
-            attributes: ['IDTurma', 'Nome', 'IDUsuario']
+            attributes: ['IDTurma', 'Nome']
         });
 
-        const usuarios = await usuario.findAll ({
-            raw:true,
-            attributes: ['IDUsuario']
-        });
-
-        res.render('../views/TM_diarios', { usuarios, disciplinas, diarios, professores, id, turmas });
-    },
+        res.render('../views/TM_visualizacao_diario', { disciplinas, diarios, professores, id, turmas });
+    }
 }
