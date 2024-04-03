@@ -17,14 +17,26 @@ module.exports = {
     },
     async turmaInsert(req, res) {
         const dados = req.body;
+
+         // Validar as entradas
+         if (dados.senha.length <= 6) {
+            return res.status(400).send("A senha deve ter mais de 6 dígitos.");
+        }
+
+        if (dados.turma.length <= 3) {
+            return res.status(400).send("O nome da turma deve ter mais de 3 dígitos.");
+        }
+
         // Criar o usuário primeiro
         const novoUsuario = await usuario.create({
             Usuario: dados.usuario,
             Senha: dados.senha,
             Permissao: false
         });
+
         // Obter o idUsuario recém-criado
         const idUsuario = novoUsuario.IDUsuario;
+
         // Criar a turma e associá-la ao usuário
         await turma.create({
             Nome: dados.turma,
@@ -34,3 +46,18 @@ module.exports = {
         res.redirect('/');
     }
 }
+
+//function validar(){
+//let nome = document.getElementById("nome").value;
+// let p = document.getElementById("teste");
+// if(nome == "" || nome == null){
+// p.innerText = "O campo nome não pode ser vazio!";
+// p.style.color="red";
+// }else if(nome.length < 3){
+// p.innerText = "Insira um nome válido!";
+// p.style.color="orange";
+// }else{
+// p.innerText = "Enviado com sucesso!";
+// p.style.color="green";
+// }
+// }
