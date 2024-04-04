@@ -7,8 +7,6 @@ module.exports = {
             raw: true,
             attributes: ['IDCurso', 'Nome']
         });
-
-        // Quando nenhum curso for selecionado, exiba todas as turmas
         const turmas = await turma.findAll({
             raw: true,
             attributes: ['IDTurma', 'Nome']
@@ -21,14 +19,12 @@ module.exports = {
 
         let turmas;
         if (id) {
-            // Se um curso for selecionado, exiba apenas as turmas desse curso
             turmas = await turma.findAll({
                 raw: true,
                 attributes: ['IDTurma', 'Nome'],
                 where: { IDCurso: id }
             });
         } else {
-            // Se nenhum curso for selecionado, exiba todas as turmas
             turmas = await turma.findAll({
                 raw: true,
                 attributes: ['IDTurma', 'Nome']
