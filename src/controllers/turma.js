@@ -18,12 +18,14 @@ module.exports = {
     async turmaInsert(req, res) {
         const dados = req.body;
 
-         // Validar as entradas
-         if (dados.senha.length <= 6) {
+        // Validar as entradas
+        if (dados.senha.length <= 6) {
+            alert('dadsadsa')
             return res.status(400).send("A senha deve ter mais de 6 dígitos.");
         }
 
         if (dados.turma.length <= 3) {
+            alert('dadsadsa')
             return res.status(400).send("O nome da turma deve ter mais de 3 dígitos.");
         }
 
@@ -47,17 +49,17 @@ module.exports = {
     }
 }
 
-//function validar(){
-//let nome = document.getElementById("nome").value;
-// let p = document.getElementById("teste");
-// if(nome == "" || nome == null){
-// p.innerText = "O campo nome não pode ser vazio!";
-// p.style.color="red";
-// }else if(nome.length < 3){
-// p.innerText = "Insira um nome válido!";
-// p.style.color="orange";
-// }else{
-// p.innerText = "Enviado com sucesso!";
-// p.style.color="green";
-// }
-// }
+function validar() {
+    let nome = document.getElementById("nome").value;
+    let p = document.getElementById("teste");
+    if (nome == "" || nome == null) {
+        p.innerText = "O campo nome não pode ser vazio!";
+        p.style.color = "red";
+    } else if (nome.length < 3) {
+        p.innerText = "Insira um nome válido!";
+        p.style.color = "orange";
+    } else {
+        p.innerText = "Enviado com sucesso!";
+        p.style.color = "green";
+    }
+}

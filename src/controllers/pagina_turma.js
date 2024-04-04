@@ -40,5 +40,5 @@ module.exports = {
         });
 
         res.render('../views/pagina_turma', { disciplinas, diarios, professores, id, turmas });
-    },
+    }
 }

@@ -40,5 +40,15 @@ module.exports = {
         });
 
         res.render('../views/visualizacao_diario', { disciplinas, diarios, professores, id, turmas });
+    },
+    async deletarPost(req, res) {
+        const id = req.query.id;
+        
+        const diarioDeletado = await diario.destroy ({
+            where: {
+                IDDiario : id
+            }
+        })
+        res.redirect('/');
     }
 }

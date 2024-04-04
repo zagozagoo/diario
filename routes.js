@@ -37,7 +37,10 @@ route.post('/cadastro_professor', professor.professorInsert);
 
 route.get('/pagina-da-turma', turmaSelecionada.listaDisciplinas);
 
+
 route.get('/visualizacao_diario', visualizacao.pagVisualizacaoGet);
+route.post('/visualizacao_diario', visualizacao.deletarPost);
+
 
 //ROTAS PARA TM(TURMAS) 
 route.get('/diario_turmas', TM_diarios.listaDisciplinas);
