@@ -14,7 +14,11 @@
 
 .card {
     margin: 8vw;
-    width: 30%;
+    width: 45%;
+}
+
+.card-body {
+    height: 210px;
 }
 
 /* barra colorida */
@@ -42,6 +46,7 @@
 
 h2 {
     text-align: center;
+    padding-top: 20px;
 }
 
 .input-group {
@@ -120,3 +125,8 @@ body {
     z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
 }
 
+.divisao {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

@@ -19,6 +19,7 @@
 
 h2 {
     text-align: center;
+    padding-top: 20px;
 }
 
 .input-group {
@@ -107,3 +108,11 @@ body {
       height: 6px;
       border-radius: 5px 5px 0 0;
   }
+
+/* NNOVA EDIÇÃO: MAS ENTORTOU OS LABEL */
+
+  .divisao {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

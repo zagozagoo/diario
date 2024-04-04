@@ -14,11 +14,16 @@
 
 .card {
     margin: 8vw;
-    width: 30%;
+    width: 45%;
+}
+
+.card-body {
+    height: 210px;
 }
 
 h2 {
     text-align: center;
+    padding-top: 20px;
 }
 
 .input-group {
@@ -107,3 +112,11 @@ body {
       height: 6px;
       border-radius: 5px 5px 0 0;
   }
+
+  /* esse divisao nao funciona nas eu quro as coisas o meiooooooooooooooooooooooooo */
+
+  /* .divisao {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+} */
