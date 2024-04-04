@@ -18,15 +18,20 @@ module.exports = {
     async turmaInsert(req, res) {
         const dados = req.body;
 
+        const cursos = await curso.findAll({
+            raw: true, // Retorna somente os valores de uma tabela, sem os metadados.
+            attributes: ['IDCurso', 'Nome']
+        });
+
         // Validar as entradas
         if (dados.senha.length <= 6) {
-            alert('dadsadsa')
-            return res.status(400).send("A senha deve ter mais de 6 dígitos.");
+            var error = "A senha deve ter mais de 6 dígitos."
+            return res.render("../views/turma", { error, cursos });
         }
 
         if (dados.turma.length <= 3) {
-            alert('dadsadsa')
-            return res.status(400).send("O nome da turma deve ter mais de 3 dígitos.");
+            var error = "O nome da turma deve ter mais de 3 dígitos.";
+            return res.render("../views/turma", { error, cursos });
         }
 
         // Criar o usuário primeiro
@@ -45,6 +50,7 @@ module.exports = {
             IDCurso: dados.cursos,
             IDUsuario: idUsuario // Associar a turma ao usuário recém-criado
         });
+
         res.redirect('/');
     }
 }

@@ -96,8 +96,13 @@
                         <label for="floatingSelect">Curso</label>
                     </div>
                     <div class="divisao">
-                        <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar">
+                        <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar"
+                        style="background-color: rgb(75, 153, 243);">
                     </div>
+                    <!-- validação mínima para senha -->
+                    <% if (typeof error != "undefined") { %>
+                        <%= error %>
+                    <% } %>
                 </div>
             </form>
         </div>

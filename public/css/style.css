@@ -88,3 +88,15 @@ body {
     background-color: rgb(158, 158, 158);
     transition: 0.5s;
 }
+
+
+html:after{
+    content:'';
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;  
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255),  rgb(47, 233, 87));  
+      height: 6px;
+      border-radius: 5px 5px 0 0;
+}
