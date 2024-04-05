@@ -55,17 +55,17 @@ module.exports = {
     }
 }
 
-function validar() {
-    let nome = document.getElementById("nome").value;
-    let p = document.getElementById("teste");
-    if (nome == "" || nome == null) {
-        p.innerText = "O campo nome não pode ser vazio!";
-        p.style.color = "red";
-    } else if (nome.length < 3) {
-        p.innerText = "Insira um nome válido!";
-        p.style.color = "orange";
-    } else {
-        p.innerText = "Enviado com sucesso!";
-        p.style.color = "green";
-    }
-}
+// function validar() {
+//     let nome = document.getElementById("nome").value;
+//     let p = document.getElementById("teste");
+//     if (nome == "" || nome == null) {
+//         p.innerText = "O campo nome não pode ser vazio!";
+//         p.style.color = "red";
+//     } else if (nome.length < 3) {
+//         p.innerText = "Insira um nome válido!";
+//         p.style.color = "orange";
+//     } else {
+//         p.innerText = "Enviado com sucesso!";
+//         p.style.color = "green";
+//     }
+//}
