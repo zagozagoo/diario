@@ -1,8 +1,6 @@
 const usuario = require('../model/usuario');
 const turma = require('../model/turma');
 
-
-
 module.exports = {
     async pagLoginGet(req, res) {
         res.render('../views/login');
