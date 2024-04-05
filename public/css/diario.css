@@ -25,6 +25,7 @@
 
 h2 {
     text-align: center;
+    padding-top: 20px;
 }
 
 .input-group>.form-control {
@@ -95,4 +96,15 @@ body {
     top: 60px; /* Altura da barra de navegação */
     left: 20px;
     z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
+}
+
+html:after{
+    content:'';
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;  
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255),  rgb(47, 233, 87));  
+      height: 6px;
+      border-radius: 5px 5px 0 0;
 }

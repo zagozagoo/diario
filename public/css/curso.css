@@ -14,11 +14,39 @@
 
 .card {
     margin: 8vw;
-    width: 30%;
+    width: 35%;
 }
+
+.card-body {
+    height: 210px;
+}
+
+/* barra colorida */
+.card:after{
+    content:'';
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;  
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255),  rgb(47, 233, 87));  
+      height: 6px;
+      border-radius: 5px 5px 0 0;
+  }
+/* 
+  html:after{
+    content:'';
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;  
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255),  rgb(47, 233, 87));  
+      height: 6px;
+      border-radius: 5px 5px 0 0;
+  } */
 
 h2 {
     text-align: center;
+    padding-top: 20px;
 }
 
 .input-group {
@@ -95,4 +123,23 @@ body {
     top: 60px; /* Altura da barra de navegação */
     left: 20px;
     z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
+}
+
+.divisao {
+    margin-top: 30px;
+}
+
+/* NNOVA EDIÇÃO: MAS ENTORTOU OS LABEL */
+#campo_form {
+    display: flex;
+    flex-direction: column;
+}
+
+#select_form select {
+    width: 100% !important;
+}
+
+#button_form {
+    display: flex;
+    justify-content: center;
 }

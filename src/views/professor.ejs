@@ -19,12 +19,6 @@
     <link rel="stylesheet" href="../css/disciplina.css" />
     <script src="../../public/js/script.js"></script>
 
-    <script>
-        function toggleDarkMode() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-        }
-    </script>
 </head>
 
 <body>
@@ -67,7 +61,7 @@
             <h2>Cadastrar um novo professor</h2>
             <form action="/cadastro_professor" method="post" class="card-body">
                 <div class="input-group mb-3">
-                    <div class="divisao">
+                    <div class="divisao" id="campo_form">
                         <label for="professor">Nome</label>
                         <input type="text" class="form-control" name="professor" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
@@ -79,9 +73,14 @@
                         </select>
                     </div>
 
-                    <div class="divisao">
-                        <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar">
+                    <div class="divisao" id="button_form">
+                        <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar"
+                            style="background-color: rgb(75, 153, 243);">
                     </div>
+                    <!-- validação mínima para senha -->
+                    <!-- <%// if (typeof error !="undefined" ) { %>
+                        <%=// error %>
+                            <%// } %> -->
                 </div>
             </form>
         </div>

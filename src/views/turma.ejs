@@ -17,14 +17,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/turma.css">
-    <!-- <script src="../../public/js/script.js"></script> -->
-    
-    <script>
-        function toggleDarkMode() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-        }
-    </script>
+    <script src="../../public/js/script.js"></script>
+
 </head>
 
 <body>
@@ -66,23 +60,23 @@
             <h2>Cadastrar uma nova turma</h2>
             <form action="/cadastro_turma" method="post" class="card-body">
                 <div class="input-group mb-3">
-                    <div class="divisao">
+                    <div class="divisao" id="campo_form">
                         <label for="turma">Nome</label>
                         <input type="text" class="form-control" name="turma" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
                     </div>
-                    <div class="divisao">
+                    <div class="divisao" id="campo_form">
                         <label for="usuario">Usuário</label>
                         <input type="text" class="form-control" name="usuario" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
                     </div>
-                    <div class="senha">
+                    <div class="senha" id="campo_form">
                         <label for="senha">Senha</label>
                         <input type="password" class="form-control" name="senha" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
                     </div>
 
-                    <div class="form-floating mb-3 w-25">
+                    <div class="form-floating mb-3 w-25" id="select_form">
                         <select name="cursos" class="form-select" id="floatingSelect"
                             aria-label="Floating label select example" required>
 
@@ -95,9 +89,20 @@
                         </select>
                         <label for="floatingSelect">Curso</label>
                     </div>
-                    <div class="divisao">
-                        <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar">
+                    <div class="divisao" id="button_form">
+                        <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar"
+                            style="background-color: rgb(75, 153, 243);">
                     </div>
+
+                    <!-- validação mínima para senha -->
+                    <% if (typeof error !="undefined" ) { %>
+                        <%= error %>
+                            <% } %>
+
+                    <!-- IF dentro do card: verifica se o error não é undefined, porque quando essa página é renderizada pela primeira vez,
+                    não é passado a variável erro pra ela. Se olhar o back dessa página (back end do turma), no get dela é passado apenas a lista de cursos
+		            se tirar esse if, automaticamente toda vez que essa página for renderizada, vai dar erro falando que "error" não existe ou não está definido -->
+
                 </div>
             </form>
         </div>

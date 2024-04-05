@@ -14,11 +14,16 @@
 
 .card {
     margin: 8vw;
-    width: 30%;
+    width: 35%;
+}
+
+.card-body {
+    height: 210px;
 }
 
 h2 {
     text-align: center;
+    padding-top: 20px;
 }
 
 .input-group {
@@ -42,10 +47,14 @@ main {
 
 /* configurações de modo claro/escuro */
 :root {
-    --cor-fundo-claro: #ffffff; /* cor de fundo padrão (claro) */
-    --cor-texto-claro: #222222; /* cor do texto padrão (claro) */
-    --cor-fundo-escuro: #272727; /* cor de fundo em modo escuro */
-    --cor-texto-escuro: #ffffff; /* cor do texto em modo escuro */
+    --cor-fundo-claro: #ffffff;
+    /* cor de fundo padrão (claro) */
+    --cor-texto-claro: #222222;
+    /* cor do texto padrão (claro) */
+    --cor-fundo-escuro: #272727;
+    /* cor de fundo em modo escuro */
+    --cor-texto-escuro: #ffffff;
+    /* cor do texto em modo escuro */
 }
 
 body {
@@ -74,7 +83,8 @@ body {
 }
 
 .dark-mode .header.navbar .nav-item .nav-link {
-    color: var(--cor-texto-escuro) !important; /* Altera a cor do texto dos nav-links para o modo escuro */
+    color: var(--cor-texto-escuro) !important;
+    /* Altera a cor do texto dos nav-links para o modo escuro */
 }
 
 .dark-mode a {
@@ -83,15 +93,50 @@ body {
 
 /*o formulário no modo escuro */
 .dark-mode .card {
-    background-color: #333; /* or de fundo para o modo escuro */
-    color: var(--cor-texto-escuro) !important; /* altera a cor do texto do formulário para o modo escuro */
+    background-color: #333;
+    /* or de fundo para o modo escuro */
+    color: var(--cor-texto-escuro) !important;
+    /* altera a cor do texto do formulário para o modo escuro */
 }
 
 
 /* ajustando posição do botão */
 .toggle-button {
     position: fixed;
-    top: 60px; /* Altura da barra de navegação */
+    top: 60px;
+    /* Altura da barra de navegação */
     left: 20px;
-    z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
+    z-index: 9999;
+    /* Certifica-se de que o botão está acima de outros elementos */
+}
+
+/* barra colorida */
+.card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255), rgb(47, 233, 87));
+    height: 6px;
+    border-radius: 5px 5px 0 0;
+}
+
+.divisao {
+    margin-top: 10px;
+}
+
+/* NNOVA EDIÇÃO: MAS ENTORTOU OS LABEL */
+#campo_form {
+    display: flex;
+    flex-direction: column;
+}
+
+#select_form select {
+    width: 100% !important;
+}
+
+#button_form {
+    display: flex;
+    justify-content: center;
 }

@@ -18,13 +18,6 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/curso.css" />
     <script src="../../public/js/script.js"></script>
-    
-    <script>
-        function toggleDarkMode() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-        }
-    </script>
 </head>
 
 <body>
@@ -71,15 +64,22 @@
             <h2>Cadastrar um novo curso</h2>
             <form action="/cadastro_curso" method="post" class="card-body">
                 <div class="input-group mb-3">
-                    <div class="divisao">
-                        <label for="curso">Nome do curso</label>
+                    <div class="divisao" id="campo_form>
+                        <label for=" curso">Nome do curso</label>
                         <input type="text" class="form-control" name="curso" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
                     </div>
 
-                    <div class="divisao">
-                        <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar">
+                    <div class="divisao" id="button_form">
+                        <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar"
+                            style="background-color: rgb(75, 153, 243);">
                     </div>
+
+                    <!-- validação mínima para senha -->
+                    <!-- <%// if (typeof error !="undefined" ) { %>
+                        <%=// error %>
+                            <%// } %> -->
+
                 </div>
             </form>
         </div>
