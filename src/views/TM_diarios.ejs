@@ -21,9 +21,9 @@
 
 <body>
     <header>
-        <nav class="shadow-lg navbar navbar-expand-lg top">
+        <nav class="shadow-lg navbar navbar-expand-lg top position-fixed w-100">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/"><strong class="RGB_Controle">Diário de Bordo</strong></a>
+                <a class="navbar-brand" href=""><strong class="RGB_Controle">Diário de Bordo</strong></a>
                 <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,8 @@
                 </button> -->
             </div>
             <div>
-                <button style="margin-top: 100px;"><a href="/criar_diario">Cadastrar Diário de bordo</a> </button>
+                <button style="margin-top: 100px;"><a href="/criar_diario/?id=<%=id%>">
+                    Cadastrar Diário de bordo</a> </button>
             </div>
             <!-- <div class="" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
