@@ -58,8 +58,8 @@
                 </ul>
             </div>
         </nav>
-
     </header>
+    
     <main>
         <button onclick="toggleDarkMode()" class="toggle-button">Alternar Modo</button>
 
@@ -85,9 +85,9 @@
                     </div>
 
                     <!-- validação mínima para senha -->
-                    <!-- <%// if (typeof error !="undefined" ) { %>
-                        <%=// error %>
-                            <%// } %> -->
+                    <% if (typeof error !="undefined" ) { %>
+                        <%= error %>
+                            <% } %>
                 </div>
             </form>
         </div>
