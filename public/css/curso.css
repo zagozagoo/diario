@@ -14,7 +14,7 @@
 
 .card {
     margin: 8vw;
-    width: 45%;
+    width: 35%;
 }
 
 .card-body {
@@ -126,7 +126,20 @@ body {
 }
 
 .divisao {
+    margin-top: 30px;
+}
+
+/* NNOVA EDIÇÃO: MAS ENTORTOU OS LABEL */
+#campo_form {
+    display: flex;
+    flex-direction: column;
+}
+
+#select_form select {
+    width: 100% !important;
+}
+
+#button_form {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
 }
