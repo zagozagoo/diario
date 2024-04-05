@@ -29,7 +29,7 @@
 
 <body>
     <header>
-        <nav class="shadow-lg navbar navbar-expand-lg top">
+        <nav class="shadow-lg navbar navbar-expand-lg top position-fixed w-100 top-0">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><strong class="RGB_Controle">Diário de Bordo</strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,7 +38,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- O que faz a responsividade-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <strong>Cadastrar: </strong>
@@ -61,44 +61,39 @@
     </header>
 
     <main>
-        <div class="flex">
-            <button onclick="toggleDarkMode()" class="toggle-button">Alternar Modo</button>
-            <div class="form-floating">
+            <div class="flex">
+                <button onclick="toggleDarkMode()" class="toggle-button">Alternar Modo</button>
 
-                <form action="/" method="post">
-                    <select id="curso" class="form-select" aria-label="Floating label select example"
-                        onchange="this.form.submit()" name="curso">
-
-                        <option value="">Selecione um curso</option>
-
-                        <% for (let i=0; i<cursos.length; i++) { %>
-                            <option value='<%= cursos[i].IDCurso %>' <%=id==cursos[i].IDCurso? 'selected' : '' %>> <%=
-                                    cursos[i].Nome %>
-                            </option>
-                            <% } %>
-
-                    </select>
-                </form>
+                <div class="form-floating">
+                    <form action="/" method="post">
+                        <select id="curso" class="form-select" aria-label="Floating label select example"
+                            onchange="this.form.submit()" name="curso">
+                            <option value="">Selecione um curso</option>
+                            <% for (let i=0; i<cursos.length; i++) { %>
+                                <option value='<%= cursos[i].IDCurso %>' <%=id==cursos[i].IDCurso? 'selected' : '' %>>
+                                    <%= cursos[i].Nome %>
+                                </option>
+                                <% } %>
+                        </select>
+                    </form>
+                </div>
             </div>
-        </div>
 
-
-        <div class="d-flex p-2 flex-wrap justify-content-center">
-            <%for (let i=0; i<turmas.length; i++){%>
-                <!-- tem que ajustar o bloco -->
-                <a href="/pagina-da-turma?id=<%= turmas[i].IDTurma %>">
-                    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded align-items-center m-5 mt-0"
-                        style="width: 25rem;">
-                        <div class="card-body text-center">
-                            <%= turmas[i].Nome %>
+            <div class="d-flex p-2 flex-wrap justify-content-center mt-5">
+                <%for (let i=0; i<turmas.length; i++){%>
+                    <!-- tem que ajustar o bloco -->
+                    <a href="/pagina-da-turma?id=<%= turmas[i].IDTurma %>">
+                        <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded align-items-center m-5 mt-5"
+                            style="width: 25rem;">
+                            <div class="card-body text-center">
+                                <%= turmas[i].Nome %>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <%}%>
-        </div>
+                    </a>
+                    <%}%>
+            </div>
 
-        <!-- colocar na tela de alunos -->
-
+            <!-- colocar na tela de alunos -->
     </main>
 </body>
 
