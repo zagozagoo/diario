@@ -8,6 +8,12 @@ module.exports = {
         // Recebe as informações do front-end
         const dados = req.body;
         // Criando curso no banco de dados
+
+        // if (dados.curso.length <= 3) {
+        //     var error = "O nome do curso deve ter mais de 3 dígitos.";
+        //     return res.render("../views/turma", { error, cursos });
+        // }
+
         await curso.create({
             Nome: dados.curso
         });
@@ -15,6 +21,21 @@ module.exports = {
         res.redirect('/');
     }
 }
+
+// function validar() {
+//     let nome = document.getElementById("nome").value;
+//     let p = document.getElementById("teste");
+//     if (nome == "" || nome == null) {
+//         p.innerText = "O campo nome não pode ser vazio!";
+//         p.style.color = "red";
+//     } else if (nome.length < 3) {
+//         p.innerText = "Insira um nome válido!";
+//         p.style.color = "orange";
+//     } else {
+//         p.innerText = "Enviado com sucesso!";
+//         p.style.color = "green";
+//     }
+// }
 
 // EXEMPLO DO LUIZ
 // module.exports = {

@@ -17,14 +17,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/turma.css">
-    <!-- <script src="../../public/js/script.js"></script> -->
-    
-    <script>
-        function toggleDarkMode() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-        }
-    </script>
+    <script src="../../public/js/script.js"></script>
+
 </head>
 
 <body>
@@ -97,12 +91,18 @@
                     </div>
                     <div class="divisao" id="button_form">
                         <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar"
-                        style="background-color: rgb(75, 153, 243);">
+                            style="background-color: rgb(75, 153, 243);">
                     </div>
+
                     <!-- validação mínima para senha -->
-                    <% if (typeof error != "undefined") { %>
+                    <% if (typeof error !="undefined" ) { %>
                         <%= error %>
-                    <% } %>
+                            <% } %>
+
+                    <!-- IF dentro do card: verifica se o error não é undefined, porque quando essa página é renderizada pela primeira vez,
+                    não é passado a variável erro pra ela. Se olhar o back dessa página (back end do turma), no get dela é passado apenas a lista de cursos
+		            se tirar esse if, automaticamente toda vez que essa página for renderizada, vai dar erro falando que "error" não existe ou não está definido -->
+
                 </div>
             </form>
         </div>
