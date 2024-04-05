@@ -30,7 +30,7 @@
     <header>
         <nav class="shadow-lg navbar navbar-expand-lg top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/"><strong class="RGB_Controle">Diário de Bordo</strong></a>
+                <a class="navbar-brand" href=""><strong class="RGB_Controle">Diário de Bordo</strong></a>
                 <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -63,18 +63,18 @@
 
         <div class="card">
             <h2>Cadastrar uma novo diário</h2>
-            <form action="/criar_diario" method="post" class="card-body">
-                <div class="turma">
+            <form action="/criar_diario/?id=<% id %>" method="post" class="card-body">
+                <!-- <div class="turma">
                     <label for="turma">Turma</label>
                     <select name="turma" class="form-select" id="floatingSelect"
                         aria-label="Floating label select example" required>
-                        <% for (let i=0; i<turmas.length; i++) { %>
-                            <option value='<%= turmas[i].IDTurma%>'>
-                                <%= turmas[i].Nome %>
+                        <%// for (let i=0; i<turmas.length; i++) { %>
+                            <option value='<%=// turmas[i].IDTurma%>'>
+                                <%=// turmas[i].Nome %>
                             </option>
-                            <% } %>
+                            <%// } %>
                     </select>
-                </div>
+                </div> -->
                 <div class="professor">
                     <label for="professor">Professor</label>
                     <select name="professor" class="form-select" id="floatingSelect"

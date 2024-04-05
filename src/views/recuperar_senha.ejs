@@ -20,6 +20,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/login.css">
     <script src="../../public/js/script.js"></script>
+    <script defer src="../../public/js/recuperar_senha.js"></script>
 
     <script>
         function toggleDarkMode() {
@@ -36,10 +37,11 @@
 
             <div class="form">
                 <form action="/recuperar_senha" method="post">
-                <input type="text" placeholder="EDV ou Turma" name="usuario" />
-                <input type="password" placeholder="Digite a nova senha" name="senha1" />
-                <input type="password" placeholder="Digite novamente" name="senha2" />
-                <button type="submit"> Alterar </button>
+                <input type="text" placeholder="EDV ou Turma" name="usuario" id="usuario" />
+                <input type="password" placeholder="Digite a nova senha" name="senha1" id="senha1" />
+                <input type="password" placeholder="Digite novamente" name="senha2" id="senha2" />
+                <input type="hidden" name="resposta" id="resposta">
+                <button type="submit" id="botao" onclick="veirificaSenha()"> Alterar </button>
             </form>
             </div>
         </div>

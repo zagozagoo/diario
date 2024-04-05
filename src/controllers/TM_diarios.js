@@ -25,6 +25,13 @@ module.exports = {
             });
         }
 
+        // testeeeee da para apagar depois
+        const turmaa = await turma.findOne({
+            raw: true,
+            attributes: ['IDTurma'],
+            where: { IDTurma: id }
+        })
+
         const disciplinas = await disciplina.findAll({
             raw: true,
             attributes: ['IDDisciplina', 'Nome']
@@ -45,6 +52,6 @@ module.exports = {
             attributes: ['IDUsuario']
         });
 
-        res.render('../views/TM_diarios', { usuarios, disciplinas, diarios, professores, id, turmas });
+        res.render('../views/TM_diarios', { usuarios, disciplinas, diarios, professores, id, turmas, turmaa});
     },
 }
