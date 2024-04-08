@@ -1,7 +1,28 @@
 function toggleDarkMode() {
+    // Pega a referencia do elemento body do html
     const body = document.body;
-    body.classList.toggle('dark-mode');
+
+    // Verifica se o modo escuro já está ativado
+    const darkModeEnabled = body.classList.contains('dark-mode');
+
+   // Adiciona ou remove a classe dark-mode
+   body.classList.toggle('dark-mode');
+
+   // Armazena o estado do modo escuro no localStorage
+   localStorage.setItem('darkModeEnabled', !darkModeEnabled);
 }
+
+// Aplica o modo escuro se estiver armazenado no localStorage após o DOM ser carregado
+document.addEventListener('DOMContentLoaded', function() {
+    const body = document.body;
+    const darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
+
+    // Aplica o modo escuro se estiver armazenado no localStorage
+    if (darkModeEnabled) {
+        body.classList.add('dark-mode');
+    }
+});
+
 
 //caixa descricao dinamica
 const descricaoTextarea = document.getElementById('descricao');
