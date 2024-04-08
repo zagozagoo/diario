@@ -133,4 +133,9 @@ html:after{
 .main-pagina-turma{
     height: 90vh;
 }
+.darkmode-TM_diarios{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
 

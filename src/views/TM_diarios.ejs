@@ -20,72 +20,72 @@
 </head>
 
 <body>
-    <header >
+    <header>
         <nav class="shadow-lg navbar navbar-expand-lg top position-fixed w-100">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><strong class="RGB_Controle">Diário de Bordo</strong></a>
             </div>
-              
-       
-             <button style="height: 100%; width: 10%;"><a href="/criar_diario/?id=<%=id%>">
-                        Criar Diário</a> </button>
-        
+            <button style="height: 100%; width: 10%;"><a href="/criar_diario/?id=<%=id%>">Criar Diário</a> </button>
+
         </nav>
     </header>
- 
-           
+
+
     <main>
-        <button onclick="toggleDarkMode()" class="toggle-button">🌙</button>
-        
+        <div class="darkmode-TM_diarios">
             <h1 style="margin-top:20px; font-size: 30px; padding-left: 20px;">Diários anteriores</h1>
-        
-        <div class="item">
-        <div class="item" style=" padding-left: 20px; padding-right: 20px;">
-            <table style="margin-top: 20px;" class="table table-hover">
-                <thead>
-                    <tr>
-                        <td>Data</td>
-                        <td>Disciplina</td>
-                        <td>Professor</td>
-                        <td>Turma</td>
-                        <td></td>
-                    </tr>
-                </thead>
-                <% diarios.forEach(diario=> { %>
-                    <div class="d-flex justify-content-center flex-wrap gap-5">
-                        <tbody>
-                            <td>
-                                <p>
-                                    <%= new Date(diario.Data).toLocaleDateString('pt-BR'); %>
-                                </p>
-                            </td>
-                            <td>
-                                <p>
-                                    <%= disciplinas.filter(x=> x.IDDisciplina == diario.IDDisciplina)[0].Nome %>
-                                </p>
-                            </td>
-                            <td>
-                                <p>
-                                    <%= professores.filter(x=> x.IDProfessor == diario.IDProfessor)[0].Nome %>
-                                </p>
-                            </td>
-                            <td>
-                                <p>
-                                    <%= turmas.filter(x=> x.IDTurma == diario.IDTurma)[0].Nome %>
-                                </p>
-                            </td>
-                            <td><a href="/visualizacao_turma_diario?id=<%=diario.IDDiario%>"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
-                                        class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
-                                        <path
-                                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
-                                    </svg></a></td>
-                        </tbody></a>
-                    </div>
-                    <% }); %>
-            </table>
+            <button onclick="toggleDarkMode()" class="toggle-button">🌙</button>
+           
         </div>
+
+
+        <div class="item">
+            <div class="item" style=" padding-left: 20px; padding-right: 20px;">
+                <table style="margin-top: 20px;" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>Data</td>
+                            <td>Disciplina</td>
+                            <td>Professor</td>
+                            <td>Turma</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <% diarios.forEach(diario=> { %>
+                        <div class="d-flex justify-content-center flex-wrap gap-5">
+                            <tbody>
+                                <td>
+                                    <p>
+                                        <%= new Date(diario.Data).toLocaleDateString('pt-BR'); %>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <%= disciplinas.filter(x=> x.IDDisciplina == diario.IDDisciplina)[0].Nome %>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <%= professores.filter(x=> x.IDProfessor == diario.IDProfessor)[0].Nome %>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <%= turmas.filter(x=> x.IDTurma == diario.IDTurma)[0].Nome %>
+                                    </p>
+                                </td>
+                                <td><a href="/visualizacao_turma_diario?id=<%=diario.IDDiario%>"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+                                            class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                            <path
+                                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                                        </svg></a></td>
+                            </tbody></a>
+                        </div>
+                        <% }); %>
+                </table>
+            </div>
     </main>
 </body>
 
