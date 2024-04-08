@@ -1,3 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 6vh;
+    position: relative;
+    top: 0;
+}
+nav{
+    position: relative;
+    top: 0;
+
+}
 .RGB_Controle {
     background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255));
     -webkit-background-clip: text;
@@ -39,7 +54,6 @@ body {
     background-color: var(--cor-fundo-escuro) !important;
     color: var(--cor-texto-escuro) !important;
 }
-
 
 /* CSS para a barra de navegação no modo claro */
 .header.navbar {

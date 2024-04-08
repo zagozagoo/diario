@@ -1,6 +1,8 @@
+const { raw } = require('express');
 const curso = require('../model/curso');
 const turma = require('../model/turma');
 const usuario = require('../model/usuario');
+const { where } = require('sequelize');
 
 module.exports = {
     async pagTurmaGet(req, res) {
@@ -33,6 +35,20 @@ module.exports = {
             var error = "O nome da turma deve ter mais de 3 dígitos.";
             return res.render("../views/turma", { error, cursos });
         }
+
+        // Funçao para comparar se nome do usário ja esxiste o banco
+        const comparar_usuario = await usuario.findOne({
+            raw: true,
+            attributes: ['Usuario'],
+            where: { Usuario: dados.usuario }
+            // comparando Usuario do banco com o usuario no campo de digitação que é o name do input no html
+        });
+
+        if (comparar_usuario) {
+            var error = "O nome de usuário já existe";
+            return res.render("../views/turma", { error, cursos});
+        }
+
 
         // Criar o usuário primeiro
         const novoUsuario = await usuario.create({
