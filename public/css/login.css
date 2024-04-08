@@ -171,3 +171,8 @@ body {
   left: 20px;
   z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
 }
+.recupera_senha{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}

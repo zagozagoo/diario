@@ -75,6 +75,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    top:70px
 }
 
 .toggle-button {
@@ -99,4 +100,25 @@ html:after{
     background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255),  rgb(47, 233, 87));  
       height: 6px;
       border-radius: 5px 5px 0 0;
+}
+/* .menus{
+    background-color: aqua;
+} */
+.conteudo{
+    margin-top: 100px;
+}
+.main-index{
+    height: 90vh;
+}
+.form-floating{
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+.main-pagina-turma{
+    height: 90vh;
+}
+
+.tabela-diario {
 }
