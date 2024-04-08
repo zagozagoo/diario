@@ -134,3 +134,8 @@ html:after{
     height: 90vh;
 }
 
+/* Tabela dark-mode */
+.dark-mode td {
+    color: var(--cor-texto-escuro) !important;
+    background-color: var(--cor-fundo-escuro) !important;
+}
