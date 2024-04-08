@@ -139,3 +139,16 @@ html:after{
     color: var(--cor-texto-escuro) !important;
     background-color: var(--cor-fundo-escuro) !important;
 }
+
+/* ajustando posição do botão */
+.toggle-button {
+    position: fixed;
+    top: 60px; /* Altura da barra de navegação */
+    left: 20px;
+    z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
+}
+
+.dark-mode button {
+    color: var(--cor-texto-escuro) !important;
+    background-color: var(--cor-fundo-escuro) !important;
+}
