@@ -135,7 +135,7 @@ html:after{
 }
 .darkmode-TM_diarios{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 20px;
 }
 
@@ -148,8 +148,8 @@ html:after{
 /* ajustando posição do botão */
 .toggle-button {
     position: fixed;
-    top: 60px; /* Altura da barra de navegação */
-    left: 20px;
+    top: 70px; /* Altura da barra de navegação */
+    right: 20px ;
     z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
 }
 
