@@ -157,3 +157,10 @@ html:after{
     color: var(--cor-texto-escuro) !important;
     background-color: var(--cor-fundo-escuro) !important;
 }
+.criar-diario-bt{
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 10px;
+}

@@ -15,8 +15,9 @@
 }
 
 .card {
-    margin: 5vw; /*mudei pq tava mt pra baixo*/
-    width: 30%;
+    /* margin-top: 10vw; //mudei pq tava mt pra baixo */
+    min-width: 70%;
+    /* width: 30%; */
 }
 
 .card-body {
@@ -40,6 +41,8 @@ h2 {
 main {
     display: flex;
     justify-content: center;
+    height: 90vh;
+    align-items: center;
 }
 
 /* configurações de modo claro/escuro */
@@ -93,11 +96,21 @@ body {
 /* ajustando posição do botão */
 .toggle-button {
     position: fixed;
-    top: 60px; /* Altura da barra de navegação */
-    left: 20px;
+    top: 70px; /* Altura da barra de navegação */
+    right: 20px;
     z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
-}
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 10px;
+    padding: 20px;
 
+}
+.dark-mode button {
+    color: var(--cor-texto-escuro) !important;
+    background-color: var(--cor-fundo-escuro) !important;
+}
 html:after{
     content:'';
     position:absolute;
@@ -107,4 +120,9 @@ html:after{
     background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255),  rgb(47, 233, 87));  
       height: 6px;
       border-radius: 5px 5px 0 0;
+}
+.divisao1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
