@@ -30,13 +30,16 @@
 
             <div class="form">
                 <form action="/recuperar_senha" method="post">
-                <input type="text" placeholder="EDV ou Turma" name="usuario" id="usuario" />
-                <input type="password" placeholder="Digite a nova senha" name="senha1" id="senha1" />
-                <input type="password" placeholder="Digite novamente" name="senha2" id="senha2" />
-                <input type="hidden" name="resposta" id="resposta">
-                <button type="submit" id="botao" onclick="veirificaSenha()"> Alterar </button>
-            </form>
+                    <input type="text" placeholder="EDV ou Turma" name="usuario" id="usuario" />
+                    <input type="password" placeholder="Digite a nova senha" name="senha1" id="senha1" />
+                    <input type="password" placeholder="Digite novamente" name="senha2" id="senha2" />
+                    <input type="hidden" name="resposta" id="resposta">
+                    <button type="submit" id="botao" onclick="veirificaSenha()"> Alterar </button>
+                </form>
             </div>
+            <% if (typeof error !="undefined" ) { %>
+                <%= error %>
+                    <% } %>
         </div>
     </main>
 </body>
