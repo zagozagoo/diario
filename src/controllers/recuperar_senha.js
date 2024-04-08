@@ -12,7 +12,6 @@ module.exports = {
             {Senha: senha1},
             {where: {Usuario: usuario}}
         );
-
         res.redirect('/login');
     }
 }
