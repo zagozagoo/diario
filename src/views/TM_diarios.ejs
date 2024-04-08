@@ -15,72 +15,70 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="/js/script.js"></script>
 </head>
 
 <body>
-    <header>
+    <header >
         <nav class="shadow-lg navbar navbar-expand-lg top position-fixed w-100">
             <div class="container-fluid">
-                <a class="navbar-brand" href=""><strong class="RGB_Controle">Diário de Bordo</strong></a>
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
+                <a class="navbar-brand" href="/"><strong class="RGB_Controle">Diário de Bordo</strong></a>
             </div>
-            <div>
-                <button style="margin-top: 100px;"><a href="/criar_diario/?id=<%=id%>">
-                    Cadastrar Diário de bordo</a> </button>
-            </div>
-            <!-- <div class="" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <strong>Cadastrar: </strong>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cadastro_curso">Curso</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cadastro_turma">Turma</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cadastro_professor">Professor</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cadastro_disciplina">Disciplina</a>
-                    </li>
-                </ul>
-            </div> -->
+              
+       
+             <button style="height: 100%; width: 10%;"><a href="/criar_diario/?id=<%=id%>">
+                        Criar Diário</a> </button>
+        
         </nav>
     </header>
+ 
+           
     <main>
         <div class="item">
             <table class="table table-hover">
                 <thead>
                     <tr>
-                    <td>Data</td>
-                    <td>Disciplina</td>
-                    <td>Professor</td>
-                    <td>Turma</td>
-                    <td></td>
-                </tr>
+                        <td>Data</td>
+                        <td>Disciplina</td>
+                        <td>Professor</td>
+                        <td>Turma</td>
+                        <td></td>
+                    </tr>
                 </thead>
-            <% diarios.forEach(diario=> { %>
+                <% diarios.forEach(diario=> { %>
                     <div class="d-flex justify-content-center flex-wrap gap-5">
-                        <tbody>   
-                                <td><p><%= new Date(diario.Data).toLocaleDateString('pt-BR'); %></p></td>
-                                <td><p><%= disciplinas.filter(x=> x.IDDisciplina == diario.IDDisciplina)[0].Nome %></p></td>
-                                <td><p><%= professores.filter(x=> x.IDProfessor == diario.IDProfessor)[0].Nome %></p></td>
-                                <td><p><%= turmas.filter(x=> x.IDTurma == diario.IDTurma)[0].Nome %></p></td>
-                                <td><a href="/visualizacao_turma_diario?id=<%=diario.IDDiario%>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
-                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
-                                  </svg></a></td>
+                        <tbody>
+                            <td>
+                                <p>
+                                    <%= new Date(diario.Data).toLocaleDateString('pt-BR'); %>
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    <%= disciplinas.filter(x=> x.IDDisciplina == diario.IDDisciplina)[0].Nome %>
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    <%= professores.filter(x=> x.IDProfessor == diario.IDProfessor)[0].Nome %>
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    <%= turmas.filter(x=> x.IDTurma == diario.IDTurma)[0].Nome %>
+                                </p>
+                            </td>
+                            <td><a href="/visualizacao_turma_diario?id=<%=diario.IDDiario%>"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+                                        class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                        <path
+                                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                                    </svg></a></td>
                         </tbody></a>
                     </div>
-                <% }); %>
+                    <% }); %>
             </table>
         </div>
     </main>
