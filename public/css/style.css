@@ -168,3 +168,7 @@ html:after{
 .card {
     box-shadow: #333;
 }
+
+.shadow-lg navbar navbar-expand-lg top position-fixed w-100 {
+    position: fixed;
+}
