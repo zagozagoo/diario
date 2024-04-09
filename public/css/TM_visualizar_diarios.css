@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 6vh;
+    position: relative;
+    top: 0;
+}
+nav{
+    position: relative;
+    top: 0;
+
+}
+.RGB_Controle {
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.formulario {
+    background-color: aqua;
+}
+
+.nav-item {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ng-scope {
+    max-height: 100px;
+    max-width: auto;
+
+}
+
+/* configurações de modo claro/escuro */
+:root {
+    --cor-fundo-claro: #ffffff; /* cor de fundo padrão (claro) */
+    --cor-texto-claro: #222222; /* cor do texto padrão (claro) */
+    --cor-fundo-escuro: #272727; /* cor de fundo em modo escuro */
+    --cor-texto-escuro: #ffffff; /* cor do texto em modo escuro */
+}
+
+body {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-claro);
+}
+
+.dark-mode {
+    background-color: var(--cor-fundo-escuro) !important;
+    color: var(--cor-texto-escuro) !important;
+}
+
+/* CSS para a barra de navegação no modo claro */
+.header.navbar {
+    background-color: var(--cor-fundo-claro) !important;
+}
+
+.header.navbar .nav-item .nav-link {
+    color: var(--cor-texto-claro) !important;
+}
+
+/* CSS para a barra de navegação no modo escuro */
+.dark-mode .header.navbar {
+    background-color: var(--cor-fundo-escuro) !important;
+}
+
+.dark-mode .header.navbar .nav-item .nav-link {
+    color: var(--cor-texto-escuro) !important; /* Altera a cor do texto dos nav-links para o modo escuro */
+}
+
+.dark-mode a {
+    color: var(--cor-texto-escuro) !important;
+}
+
+/*o formulário no modo escuro */
+.dark-mode .card {
+    background-color: #333; /* or de fundo para o modo escuro */
+    color: var(--cor-texto-escuro) !important; /* altera a cor do texto do formulário para o modo escuro */
+}
+
+.flex {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    top:70px
+}
+
+.toggle-button {
+    border: 0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.toggle-button:hover {
+    background-color: rgb(158, 158, 158);
+    transition: 0.5s;
+}
+
+
+html:after{
+    content:'';
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;  
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255),  rgb(47, 233, 87));  
+      height: 6px;
+      border-radius: 5px 5px 0 0;
+}
+/* .menus{
+    background-color: aqua;
+} */
+.conteudo{
+    margin-top: 100px;
+}
+.main-index{
+    height: 90vh;
+}
+.form-floating{
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+.main-pagina-turma{
+    height: 90vh;
+}
+.darkmode-TM_diarios{
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+/* Tabela dark-mode */
+.dark-mode td {
+    color: var(--cor-texto-escuro) !important;
+    background-color: var(--cor-fundo-escuro) !important;
+}
+
+/* ajustando posição do botão */
+.toggle-button {
+    position: fixed;
+    top: 70px; /* Altura da barra de navegação */
+    right: 20px ;
+    z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
+}
+
+.dark-mode button {
+    color: var(--cor-texto-escuro) !important;
+    background-color: var(--cor-fundo-escuro) !important;
+}
+
+.lixeira {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 7vh;
+}
+
+.card {
+    box-shadow: #333;
+}
+main {
+    margin-top: 50px;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.descricao{
+    background-color: rgb(202, 201, 201);
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dark-mode .descricao{
+    background-color: rgb(82, 82, 82) !important;
+}
