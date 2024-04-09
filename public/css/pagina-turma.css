@@ -126,10 +126,9 @@ html:after{
 }
 .form-floating{
     position: relative;
-    margin-top: 30px;
+    margin-top: 100px;
     display: flex;
-    justify-content: flex-start;
-    left: 20px;
+    justify-content: flex-end;
 }
 .main-pagina-turma{
     height: 90vh;
@@ -149,7 +148,7 @@ html:after{
 /* ajustando posição do botão */
 .toggle-button {
     position: fixed;
-    top: 150px; /* Altura da barra de navegação */
+    top: 120px; /* Altura da barra de navegação */
     right: 20px ;
     z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
 }
