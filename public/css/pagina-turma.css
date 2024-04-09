@@ -157,13 +157,17 @@ html:after{
     color: var(--cor-texto-escuro) !important;
     background-color: var(--cor-fundo-escuro) !important;
 }
+.dark-mode svg {
+    fill: #ffffff;
+}
 
-.lixeira {
+
+/* .lixeira {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     height: 7vh;
-}
+} */
 
 .card {
     box-shadow: #333;
@@ -171,4 +175,7 @@ html:after{
 
 .shadow-lg navbar navbar-expand-lg top position-fixed w-100 {
     position: fixed;
+}
+main{
+    padding: 20px;
 }

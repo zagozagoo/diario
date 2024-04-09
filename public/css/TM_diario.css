@@ -4,15 +4,16 @@
 }
 
 header{
-    height: 6vh;
-    position: relative;
+    position: fixed;
     top: 0;
+    z-index: 9999;
+    background-color:var(--cor-fundo-claro);
 }
-nav{
-    position: relative;
-    top: 0;
+main{
+    z-index: 1;
+}
 
-}
+
 .RGB_Controle {
     background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255));
     -webkit-background-clip: text;
@@ -60,12 +61,16 @@ body {
     background-color: var(--cor-fundo-claro) !important;
 }
 
+.dark-mode header{
+    background-color: var(--cor-fundo-escuro) ;
+}
+
 .header.navbar .nav-item .nav-link {
     color: var(--cor-texto-claro) !important;
 }
 
 /* CSS para a barra de navegação no modo escuro */
-.dark-mode .header.navbar {
+.dark-mode .header .navbar {
     background-color: var(--cor-fundo-escuro) !important;
 }
 
@@ -107,10 +112,11 @@ body {
 
 html:after{
     content:'';
-    position:absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;  
+    z-index: 99999999;
     background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255),  rgb(47, 233, 87));  
       height: 6px;
       border-radius: 5px 5px 0 0;
@@ -174,3 +180,6 @@ html:after{
     position: fixed;
 }
 
+.dark-mode svg{
+    fill: #ffffff;
+}
