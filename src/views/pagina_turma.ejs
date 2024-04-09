@@ -52,6 +52,11 @@
         </nav>
     </header>
     <main>
+        <div class="darkmode-TM_diarios">
+            <h1 style="margin-top:20px; font-size: 30px; padding-left: 20px;">Diários anteriores</h1>
+            <button onclick="toggleDarkMode()" class="toggle-button">🌙</button>
+        </div>
+
         <button onclick="toggleDarkMode()" class="toggle-button">🌙</button>
         <!-- <div class="form-floating d-flex w-25 mb-3 ms-5">
             <form action="/pagina-da-turma/<% //id %>" method="post">
@@ -86,7 +91,7 @@
                                 <td><p><%= disciplinas.filter(x=> x.IDDisciplina == diario.IDDisciplina)[0].Nome %></p></td>
                                 <td><p><%= professores.filter(x=> x.IDProfessor == diario.IDProfessor)[0].Nome %></p></td>
                                 <td><p><%= turmas.filter(x=> x.IDTurma == diario.IDTurma)[0].Nome %></p></td>
-                                <td><a href="/visualizacao_diario?id=<%=diario.IDDiario%>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <td class="lixeira"><a href="/visualizacao_diario?id=<%=diario.IDDiario%>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
                                     <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
                                   </svg></a>
