@@ -157,3 +157,14 @@ html:after{
     color: var(--cor-texto-escuro) !important;
     background-color: var(--cor-fundo-escuro) !important;
 }
+
+.lixeira {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 7vh;
+}
+
+.card {
+    box-shadow: #333;
+}
