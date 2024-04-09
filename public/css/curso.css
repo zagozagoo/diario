@@ -17,7 +17,7 @@
 }
 
 .card-body {
-    height: 210px;
+    height: 250px;
 }
 
 /* barra colorida */
@@ -161,3 +161,4 @@ body {
     display: flex;
     justify-content: center;
 }
+
