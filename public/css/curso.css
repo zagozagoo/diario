@@ -13,8 +13,7 @@
 }
 
 .card {
-    margin: 8vw;
-    width: 35%;
+    min-width: 70%;
 }
 
 .card-body {
@@ -66,7 +65,11 @@ h2 {
 main {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
+
 
 
 /* configurações de modo claro/escuro */
@@ -116,13 +119,28 @@ body {
     color: var(--cor-texto-escuro) !important; /* altera a cor do texto do formulário para o modo escuro */
 }
 
-
-/* ajustando posição do botão */
 .toggle-button {
     position: fixed;
-    top: 60px; /* Altura da barra de navegação */
-    left: 20px;
+    top: 70px; /* Altura da barra de navegação */
+    right: 20px ;
     z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
+}
+.toggle-button {
+    border: 0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.toggle-button:hover {
+    background-color: rgb(158, 158, 158);
+    transition: 0.5s;
+}
+
+/* Mudando darkmode para botão de lua */
+.dark-mode button {
+    color: var(--cor-texto-escuro) !important;
+    background-color: var(--cor-fundo-escuro) !important;
 }
 
 .divisao {
