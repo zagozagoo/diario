@@ -4,14 +4,17 @@
 }
 
 header{
-    height: 6vh;
-    position: relative;
+    position: fixed;
     top: 0;
+    z-index: 9999;
+    background-color:var(--cor-fundo-claro);
 }
-nav{
-    position: relative;
-    top: 0;
-
+main{
+    margin-top:100px;
+    z-index: 1;
+}
+nav {
+    background-color:var(--cor-fundo-claro);
 }
 .RGB_Controle {
     background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255));
@@ -53,6 +56,10 @@ body {
 .dark-mode {
     background-color: var(--cor-fundo-escuro) !important;
     color: var(--cor-texto-escuro) !important;
+}
+
+.dark-mode header nav{
+    background-color: var(--cor-fundo-escuro) ;
 }
 
 /* CSS para a barra de navegação no modo claro */
@@ -107,7 +114,8 @@ body {
 
 html:after{
     content:'';
-    position:absolute;
+    position: fixed;
+    z-index: 99999999999;
     top: 0;
     left: 0;
     right: 0;  

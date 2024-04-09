@@ -13,7 +13,6 @@ main{
     z-index: 1;
 }
 
-
 .RGB_Controle {
     background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255));
     -webkit-background-clip: text;
@@ -180,6 +179,7 @@ html:after{
     position: fixed;
 }
 
+/* mudando a cor do icone de olho no modo escuro */
 .dark-mode svg{
     fill: #ffffff;
 }
