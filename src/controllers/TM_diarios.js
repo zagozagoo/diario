@@ -14,14 +14,16 @@ module.exports = {
             diarios = await diario.findAll({
             raw: true,
             attributes: ['IDDiario', 'Data', 'IDProfessor', 'IDTurma',  'IDDisciplina'],
-            where: { IDTurma: id }
+            where: { IDTurma: id },
+            order: [['Data', 'DESC']]
             });
 
            
         } else {
             diarios = await diario.findAll({
                 raw: true,
-                attributes: ['IDDiario','Data', 'IDProfessor', 'IDTurma',  'IDDisciplina']
+                attributes: ['IDDiario','Data', 'IDProfessor', 'IDTurma',  'IDDisciplina'],
+                order: [['Data', 'DESC']]
             });
         }
 

@@ -4,14 +4,17 @@
 }
 
 header{
-    height: 6vh;
-    position: relative;
+    position: fixed;
     top: 0;
+    z-index: 9999;
+    background-color:var(--cor-fundo-claro);
 }
-nav{
-    position: relative;
-    top: 0;
-
+main{
+    margin-top:100px;
+    z-index: 1;
+}
+nav {
+    background-color:var(--cor-fundo-claro);
 }
 .RGB_Controle {
     background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(135, 14, 255), rgb(1, 124, 255));
@@ -55,6 +58,10 @@ body {
     color: var(--cor-texto-escuro) !important;
 }
 
+.dark-mode header nav{
+    background-color: var(--cor-fundo-escuro) ;
+}
+
 /* CSS para a barra de navegação no modo claro */
 .header.navbar {
     background-color: var(--cor-fundo-claro) !important;
@@ -87,7 +94,7 @@ body {
     width: 100%;
     position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 20px;
     top:70px
 }
@@ -95,6 +102,7 @@ body {
 .toggle-button {
     border: 0;
     border-radius: 10px;
+    left:20px;
     padding: 20px;
     transition: 0.5s;
 }
@@ -107,7 +115,8 @@ body {
 
 html:after{
     content:'';
-    position:absolute;
+    position: fixed;
+    z-index: 99999999999;
     top: 0;
     left: 0;
     right: 0;  
@@ -122,7 +131,7 @@ html:after{
     margin-top: 100px;
 }
 .main-index{
-    height: 90vh;
+    height: 80vh;
 }
 .form-floating{
     position: relative;
@@ -131,9 +140,7 @@ html:after{
     justify-content: flex-start;
     left: 20px;
 }
-.main-pagina-turma{
-    height: 90vh;
-}
+
 .darkmode-TM_diarios{
     display: flex;
     justify-content: flex-start;
@@ -150,7 +157,6 @@ html:after{
 .toggle-button {
     position: fixed;
     top: 150px; /* Altura da barra de navegação */
-    right: 20px ;
     z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
 }
 
