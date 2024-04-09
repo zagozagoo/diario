@@ -15,25 +15,56 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/TM_diario.css">
     <script src="/js/script.js"></script>
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <nav class="shadow-lg navbar navbar-expand-lg top position-fixed w-100">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><strong class="RGB_Controle">Diário de Bordo</strong></a>
             </div>
-            <button class="criar-diario-bt" style="height: 100%; width: 10%;"><a href="/criar_diario/?id=<%=id%>">Criar Diário</a> </button>
+            <button class="criar-diario-bt" style="height: 100%; width: 10%;"><a style="text-decoration: none; color:black" href="/criar_diario/?id=<%=id%>">Criar Diário</a> </button>
 
+        </nav>
+    </header> -->
+    <header>
+        <nav class="shadow-lg navbar navbar-expand-lg top position-fixed w-100 top-0">
+            <div class="container-fluid">
+                <a class="navbar-brand" href=""><strong class="RGB_Controle">Diário de Bordo</strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <strong>Cadastrar: </strong>
+                    </li>
+                    <li class="nav-item">
+                        <a style="text-decoration: none; color:black" href="/criar_diario/?id=<%=id%>">Diário</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/cadastro_turma">Turma</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastro_professor">Professor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastro_disciplina">Disciplina</a>
+                    </li> -->
+                </ul>
+            </div>
         </nav>
     </header>
 
 
     <main>
         <div class="darkmode-TM_diarios">
-            <h1 style="margin-top:20px; font-size: 30px; padding-left: 20px;">Diários anteriores</h1>
+            <h1 style="margin-top:50px; font-size: 30px; padding-left: 20px;">Diários anteriores</h1>
             <button onclick="toggleDarkMode()" class="toggle-button">🌙</button>
         </div>
 
