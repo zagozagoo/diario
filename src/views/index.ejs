@@ -37,7 +37,8 @@
 
                 </button>
             </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- m-5 adicionado na classe abaixo para dar espaçamento -->
+            <div class="collapse navbar-collapse m-5" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <strong>Cadastrar: </strong>
@@ -85,9 +86,9 @@
             <div class=" d-flex p-2 flex-wrap justify-content-center ">
                 <%for (let i=0; i<turmas.length; i++){%>
                     <!-- tem que ajustar o bloco -->
-                    <a style="display: block; width: 25rem;" href="/pagina-da-turma?id=<%= turmas[i].IDTurma %>">
-                        <div class="card shadow-sm p-3 mb-5   align-items-center m-5 mt-5"
-                            style="max-width: 25rem;">
+                    <a style="display: block; width: 500px;" href="/pagina-da-turma?id=<%= turmas[i].IDTurma %>">
+                        <div class="card shadow-sm p-3 m-3   align-items-center"
+                            style="max-width: 100%;">
                             <div class="card-body text-center">
                                 <%= turmas[i].Nome %>
                             </div>

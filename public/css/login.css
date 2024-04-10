@@ -176,3 +176,7 @@ body {
   justify-content: center;
   padding: 10px;
 }
+
+@media (min-width: 2560px) {
+  
+}

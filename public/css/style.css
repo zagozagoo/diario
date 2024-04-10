@@ -182,3 +182,94 @@ html:after{
 .shadow-lg navbar navbar-expand-lg top position-fixed w-100 {
     position: fixed;
 }
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 1400px){
+    nav{
+        height: 7vh;
+        font-size: 25px;
+    }
+
+    strong {
+        padding-left: 10px;
+        font-size: 30px;
+    }
+
+    .card-body {
+        font-size: 25px;
+    }
+    .form-select{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .toggle-button{
+        margin-top: 70px;
+    }
+    a { 
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px){
+    nav{
+        height: 7vh;
+        font-size: 18px;
+    }
+
+    strong {
+        padding-left: 10px;
+        font-size: 18px;
+    }
+
+    .card-body {
+        font-size: 18px;
+    }
+    .form-select{
+        margin-top: 50px;
+        font-size: 18px;
+    }
+    .toggle-button{
+        margin-top: 70px;
+    }
+    a { 
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 873px) and (max-width: 1440px){
+    nav{
+        height: 7vh;
+        font-size: 15px;
+    }
+
+    strong {
+        padding-left: 10px;
+        font-size: 15px;
+    }
+
+    .card-body {
+        font-size: 15px;
+    }
+    .form-select{
+        margin-top: 50px;
+        font-size: 15px;
+    }
+    .toggle-button{
+        margin-top: 70px;
+    }
+    a { 
+        text-decoration: none;
+    }
+
+}
+
+@media (min-width: 2600px) {
+    div{
+        max-width: 150vh;
+    }
+}
+
+
+/* de 100 a 1400 ta uma merda */

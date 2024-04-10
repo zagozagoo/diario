@@ -195,4 +195,7 @@ nav {
     strong {
         padding-left: 10px;
     }
+    .card{
+        font-size: 200px;
+    }
 }
