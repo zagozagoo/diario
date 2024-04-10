@@ -14,6 +14,7 @@
 
 .card {
     min-width: 70%;
+    z-index: 999;
 }
 
 h2 {
@@ -142,4 +143,13 @@ body {
 }
 .dark-mode .navbar-toggler{
     border-color: rgb(92, 92, 92);
+}
+
+/*para deixa a navbar sobrepondo o formulário*/
+nav { 
+    background-color: #ffffff;
+    z-index: 99999999;
+}
+.dark-mode nav{
+    background-color: var(--cor-fundo-escuro);
 }

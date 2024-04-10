@@ -107,7 +107,8 @@ body {
 
 html:after{
     content:'';
-    position:absolute;
+    position:fixed;
+    z-index: 999999999;
     top: 0;
     left: 0;
     right: 0;  
@@ -186,4 +187,12 @@ main {
 }
 .dark-mode .navbar-toggler{
     border-color: rgb(92, 92, 92);
+}
+/*Arrumado navbar para ficar com darkmode e sobrepondo o formulário*/
+nav { 
+    background-color: #ffffff;
+    z-index: 99999999;
+}
+.dark-mode nav{
+    background-color: var(--cor-fundo-escuro);
 }

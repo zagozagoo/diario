@@ -165,3 +165,10 @@ body {
 .dark-mode .navbar-toggler{
     border-color: rgb(92, 92, 92);
 }
+nav { 
+    background-color: #ffffff;
+    z-index: 99999999;
+}
+.dark-mode nav{
+    background-color: var(--cor-fundo-escuro);
+}
