@@ -172,3 +172,27 @@ nav {
 .dark-mode nav{
     background-color: var(--cor-fundo-escuro);
 }
+
+@media (max-width: 767.98px){
+    h2 {
+        padding: 15px;
+    }
+    .nav-link {
+        padding-left: 10px;
+    }
+    strong {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 988px){
+    h2 {
+        padding: 15px;
+    }
+    .nav-link {
+        padding-left: 10px;
+    }
+    strong {
+        padding-left: 10px;
+    }
+}
