@@ -80,8 +80,10 @@
                             aria-describedby="inputGroup-sizing-default">
                     </div>
 
+                    <label for="floatingSelect">Curso</label>
                     <div class="form-floating mb-3 w-25" id="select_form">
-                        <select name="cursos" class="form-select" id="floatingSelect"
+                        
+                        <select name="cursos" class="" id="floatingSelect"
                             aria-label="Floating label select example" required>
 
                             <% for (let i=0; i<cursos.length; i++) { %>
@@ -91,7 +93,7 @@
                                 <% } %>
 
                         </select>
-                        <label for="floatingSelect">Curso</label>
+                        
                     </div>
                     <div class="divisao" id="button_form">
                         <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Cadastrar"
