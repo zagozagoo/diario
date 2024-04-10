@@ -183,3 +183,8 @@ html:after{
 .dark-mode svg{
     fill: #ffffff;
 }
+
+
+.dark-mode .navbar-toggler{
+    border-color: rgb(92, 92, 92);
+}

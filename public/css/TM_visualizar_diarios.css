@@ -184,3 +184,6 @@ main {
 .dark-mode .descricao{
     background-color: rgb(82, 82, 82) !important;
 }
+.dark-mode .navbar-toggler{
+    border-color: rgb(92, 92, 92);
+}
