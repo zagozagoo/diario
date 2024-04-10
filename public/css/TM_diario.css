@@ -153,7 +153,7 @@ html:after{
 /* ajustando posição do botão */
 .toggle-button {
     position: fixed;
-    top: 120px; /* Altura da barra de navegação */
+    top: 85px; /* Altura da barra de navegação */
     right: 20px ;
     z-index: 9999; /* Certifica-se de que o botão está acima de outros elementos */
 }
@@ -189,9 +189,30 @@ html:after{
     border-color: rgb(92, 92, 92);
 }
 
-@media (min-width: 2600px ) {
+@media (min-width: 2500px ) {
+   
     nav{
         height: 7vh;
-        font-size: 15px;
+        font-size: 30px;
+    }
+    
+    strong {
+        padding-left: 10px;
+        font-size: 30px;
+    }
+
+    div .item {
+        margin-top: 80px;
+        font-size: 30px;
+    }
+    .darkmode-TM_diarios {
+        margin-top: 80px;
+        font-size: 30px;
+    }
+
+    .toggle-button {
+        margin-top: 25px;
+        width: 100px;
+        height: 100px;
     }
 }
