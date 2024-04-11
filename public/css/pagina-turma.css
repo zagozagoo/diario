@@ -205,3 +205,172 @@ main{
 .deletar {
     border: 0; /*tira borda da lixeira*/
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1400px){
+    nav{
+        height: 7vh;
+        font-size: 25px;
+    }
+
+    strong {
+        padding-left: 10px;
+        font-size: 30px;
+    }
+
+    .card-body {
+        font-size: 25px;
+    }
+    .form-select{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .toggle-button{
+        margin-top: 70px;
+    }
+    a { 
+        text-decoration: none;
+    }
+        body{
+        margin-top:100px;
+    }
+    table {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px){
+    nav{
+        height: 7vh;
+        font-size: 18px;
+    }
+
+    strong {
+        padding-left: 10px;
+        font-size: 18px;
+    }
+
+    .card-body {
+        font-size: 18px;
+    }
+    .form-select{
+        margin-top: 50px;
+        font-size: 18px;
+    }
+    .toggle-button{
+        margin-top: 70px;
+    }
+    a { 
+        text-decoration: none;
+    }
+    body{
+        margin-top:100px;
+    }
+    table {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 873px) and (max-width: 1440px){
+    nav{
+        height: 7vh;
+        font-size: 20px;
+    }
+
+    strong {
+        padding-left: 10px;
+        font-size: 20px;
+    }
+
+    .card-body {
+        font-size: 15px;
+    }
+    .form-select{
+        margin-top: 50px;
+        font-size:20px;
+    }
+    .toggle-button{
+        margin-top: 70px;
+    }
+    a { 
+        text-decoration: none;
+    }
+    body{
+        margin-top:100px;
+    }
+    table {
+        font-size: 20px;
+    }
+
+}
+@media (min-width: 1440px) and (max-width: 2600px){
+    nav{
+        height: 7vh;
+        font-size: 25px;
+    }
+
+    strong {
+        padding-left: 10px;
+        font-size: 25px;
+    }
+    .card-body {
+        font-size: 25px;
+    }
+    .form-select{
+        margin-top: 50px;
+        font-size: 25px;
+    }
+    .toggle-button{
+        margin-top: 70px;
+    }
+    a { 
+        text-decoration: none;
+    }
+    body{
+        margin-top:100px;
+    }
+    table {
+        font-size: 25px;
+    }
+
+}
+@media (min-width: 2560px) {
+    nav{
+        height: 7vh;
+        font-size: 25px;
+    }
+    body{
+        margin-top:100px;
+    }
+    strong {
+        padding-left: 10px;
+        font-size: 25px;
+    }
+    .card-body {
+        font-size: 25px;
+    }
+    .form-select{
+        margin-top: 50px;
+        font-size:25px;
+    }
+    .toggle-button{
+        margin-top: 70px;
+    }
+    a { 
+        text-decoration: none;
+    }
+    table {
+        font-size: 25px;
+    }
+}
