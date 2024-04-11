@@ -267,19 +267,19 @@ a {
 @media (min-width: 1440px) and (max-width: 2600px){
     nav{
         height: 7vh;
-        font-size: 15px;
+        font-size: 18px;
     }
 
     strong {
         padding-left: 10px;
-        font-size: 15px;
+        font-size: 18px;
     }
     .card-body {
-        font-size: 15px;
+        font-size: 18px;
     }
     .form-select{
         margin-top: 50px;
-        font-size: 15px;
+        font-size: 18px;
     }
     .toggle-button{
         margin-top: 70px;
