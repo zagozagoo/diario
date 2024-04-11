@@ -113,7 +113,8 @@ body {
 }
 html:after{
     content:'';
-    position:absolute;
+    position:fixed;
+    z-index: 9999;
     top: 0;
     left: 0;
     right: 0;  
@@ -125,4 +126,10 @@ html:after{
     display: flex;
     justify-content: center;
     margin-top: 40px;
+}
+
+@media (max-height:700px){
+    .card {
+        margin-top: 140px;
+    }
 }
